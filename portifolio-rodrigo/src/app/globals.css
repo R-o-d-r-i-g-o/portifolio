@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+  cursor: none;
+}
+
+html, body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+
+#app {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  color: #ffffff;
+  
+  text-align: center;
+}
+
+#app a {
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+
+#app canvas {
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  top: 0;
+}
