@@ -1,14 +1,11 @@
 "use client"
 
-import './globals.css'
-import React from 'react';
+import React, { Fragment } from 'react';
+import * as S from '../@styles'
 import { neonCursor } from 'threejs-toys';
-import { Roboto } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
-const baseFont = Roboto({ 
-  subsets: ['latin'],
-  weight: ['400', '700']
-});
+const baseFont = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   robots: {
@@ -60,11 +57,14 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   }, [])
 
   return (
-    <html lang="en">
-      <body className={baseFont.className} id="app">
-        {children}
-      </body>
-    </html>
+    <Fragment>
+      <S.GlobalStyle />
+      <S.Html>
+        <S.Body className={baseFont.className}>
+          {children}
+        </S.Body>
+      </S.Html>
+    </Fragment>
   )
 }
 
