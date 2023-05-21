@@ -27,8 +27,8 @@ export default function RootLayout({
       radius1: 5,
       radius2: 30,
       velocityTreshold: 10,
-      sleepRadiusX: 100,
-      sleepRadiusY: 100,
+      sleepRadiusX: 300,
+      sleepRadiusY: 300,
       sleepTimeCoefX: 0.0025,
       sleepTimeCoefY: 0.0025
     })
@@ -36,9 +36,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body id="app">
-        {children}
-      </body>
+      <body id="app">{children}</body>
     </html>
   )
 }
