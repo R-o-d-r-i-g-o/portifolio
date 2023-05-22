@@ -4,9 +4,10 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    /* outline: none; */
     padding: 0;
     margin: 0;
-    cursor: none;
+    /* cursor: none; */
   }
 
   html, body {

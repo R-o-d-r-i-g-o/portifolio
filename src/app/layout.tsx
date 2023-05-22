@@ -1,8 +1,9 @@
 "use client"
 
+import * as S from '../@styles';
 import React, { Fragment } from 'react';
-import * as S from '../@styles'
 import { neonCursor } from 'threejs-toys';
+import Navbar from '../components/Navbar';
 import { Inter } from 'next/font/google';
 
 const baseFont = Inter({ subsets: ['latin'] });
@@ -26,7 +27,7 @@ export const metadata = {
     'Rodrigo designs',
     'Rodrigo developer',
     'Rodrigo portfolio',
-    'Rodrigo Marques Ribeiro', 
+    'Rodrigo Marques Ribeiro',
     'Rodrigo M. Ribeiro'
   ],
   description: 'Welcome to my portfolio site! I\'m Rodrigo, a passionate and skilled developer specializing '
@@ -61,6 +62,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
       <S.GlobalStyle />
       <S.Html>
         <S.Body className={baseFont.className}>
+          <Navbar />
           {children}
         </S.Body>
       </S.Html>
