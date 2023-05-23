@@ -1,9 +1,52 @@
+"use client"
+
+import React, { useEffect, useRef } from 'react';
 import Image from 'next/image'
 import styles from './page.module.css'
+import VanillaTilt from 'vanilla-tilt';
+import styled from 'styled-components';
 
-export default function Home() {
+const Home = () => {
+  const tiltRef = useRef(null);
+
+  useEffect(() => {
+    const tiltNode = tiltRef.current;
+
+    VanillaTilt.init(tiltNode, {
+      max: 25,
+      speed: 400,
+      glare: true,
+      'max-glare': 1,
+    });
+
+  }, []);
+
   return (
     <main className={styles.main}>
+
+
+
+      <div ref={tiltRef} />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -30,6 +73,7 @@ export default function Home() {
 
       <div className={styles.center}>
         <Image
+          ref={tiltRef}
           className={styles.logo}
           src="/next.svg"
           alt="Next.js Logo"
@@ -203,4 +247,6 @@ export default function Home() {
       </div>
     </main>
   )
-}
+};
+
+export default Home;
