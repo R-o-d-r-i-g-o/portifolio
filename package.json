@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@types/node": "20.2.1",
-    "@types/react": "18.2.6",
+    "@types/react": "18.2.7",
     "@types/react-dom": "18.2.4",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
@@ -18,11 +18,15 @@
     "next": "13.4.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-tilt": "^1.0.2",
     "styled-components": "^6.0.0-rc.1",
     "three": "^0.152.2",
     "threejs-toys": "^0.0.8",
     "typescript": "5.0.4",
     "vanilla-tilt": "^1.8.0",
     "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "react-icons": "^4.8.0"
   }
 }

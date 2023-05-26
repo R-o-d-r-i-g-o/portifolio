@@ -1,51 +1,19 @@
 "use client"
 
-import React, { useEffect, useRef } from 'react';
-import Image from 'next/image'
+import React from 'react';
 import styles from './page.module.css'
-import VanillaTilt from 'vanilla-tilt';
-import styled from 'styled-components';
 
 const Home = () => {
-  const tiltRef = useRef(null);
-
-  useEffect(() => {
-    const tiltNode = tiltRef.current;
-
-    VanillaTilt.init(tiltNode, {
-      max: 25,
-      speed: 400,
-      glare: true,
-      'max-glare': 1,
-    });
-
-  }, []);
 
   return (
     <main className={styles.main}>
 
 
 
-      <div ref={tiltRef} />
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{/* 
 
       <div className={styles.description}>
         <p>
@@ -69,11 +37,11 @@ const Home = () => {
             />
           </a>
         </div>
-      </div>
+      </div> */}
 
-      <div className={styles.center}>
+      {/* <div className={styles.center}>
         <Image
-          ref={tiltRef}
+          // ref={tiltRef}
           className={styles.logo}
           src="/next.svg"
           alt="Next.js Logo"
@@ -84,7 +52,7 @@ const Home = () => {
       </div>
 
   
-
+    */}
 
       <div className={styles.grid}>
         <a
@@ -97,7 +65,7 @@ const Home = () => {
             Docs <span>-&gt;</span>
           </h2>
           <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+        </a> 
 
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"

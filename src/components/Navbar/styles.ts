@@ -1,91 +1,107 @@
 import styled from 'styled-components';
+import { BiSun, BiMoon, BiMenu } from "react-icons/bi";
 
 export const Header = styled.header`
-  position: sticky;
-  z-index: 30;
-  top: 0;
-`;
+  position: fixed;
+  height: 56px;
+  width: 100%;
 
-export const Separator = styled.hr`
-  @media screen and (max-width: 768px) {
-    display: none;
+  @media screen and (max-width: 750px) {
+    top: initial;
+    bottom: 0;
   }
 `;
 
-export const Nav = styled.nav`
-  display: flex;
-  padding: 16px;
+export const NavList = styled.nav`
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
+  margin: 0 auto;
+  display: flex;
+  height: 100%;
+  width: 775px;
+
+  @media screen and (max-width: 750px) {
+    width: 100%
+  }
 `;
 
-export const Menu = styled.div`
+export const Container = styled.div`
+  height: 40px;
+  width: 40px;
+  border-radius: 12px;
+  background: #fbd38d;
   display: flex;
-  flex-direction: column;
-  row-gap: 6px;
+`;
+
+export const IconsCont = styled.div`
+  display: flex;
+  width: fit-content;
+  gap: 10px
+`;
+
+export const ImageView = styled(Container)`
 
   @media screen and (min-width: 768px) {
     display: none;
   }
 `;
 
-export const Clink = styled.div`
-  width: 40px;
-  height: 4px;
-  background-color: white;
-  border-radius: 2px;
+export const Dark = styled(BiMoon)`
+  margin: auto;
+  height: 20px;
+  width: 20px;
 `;
 
-export const List = styled.div<{ active: boolean }>`
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  
-  top: 60px;
-  width: 288px;
-  row-gap: 24px;
-  right: ${props => props.active ? '0' : '-288px'};
-  padding: 24px 16px;
-  transition: all 0.2s;
-  padding-top: 40px;
-  background: transparent;
-  min-height: calc(100vh - 60px);
+export const Ligth = styled(BiSun)`
+  margin: auto;
+  height: 20px;
+  width: 20px;
+`;
 
-  @media screen and (min-width: 768px) {
-    position: unset;
-    flex-direction: row;
-    
-    min-height: fit-content;
-    width: fit-content;
-    column-gap: 24px;
-    align-items: center;
-  }
+export const Menu = styled(BiMenu)`
+  margin: auto;
+  height: 20px;
+  width: 20px;
+`;
+
+export const List = styled.div`
+  display: flex;
+  width: 288px;
+  gap: 20px;
+  width: fit-content;
 `;
 
 export const Item = styled.div`
-  font-size: 18px; 
-  margin: 0 auto;
-  position: relative;
-  transition: all 0.2s;
 
-  :hover{
-    font-weight: bold;
+  a {
+    cursor: pointer;
+    line-height: 18px;
+    text-decoration: none;
+    color: #1a202c;
+    font-weight: 600;
+    font-size: 16px;
+
+    display: inline-block;
+    padding-bottom: .25rem;
+    position: relative;
   }
 
-  @media screen and (min-width: 768px) {
-    :before {
-      content: '';
-      position: absolute;
-      width: 0%;
-      height: 6px;
-      bottom: -16px;
-      left: 0;
-      background-color: black;
-      transition: all 0.2s;
+  a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fbd38d;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
 
-      :hover {
-        width: 100%;
-      }
-    }
+  a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 `;

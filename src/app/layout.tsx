@@ -1,12 +1,11 @@
-"use client"
+//"use client"
 
 import * as S from '../@styles';
-import React, { Fragment } from 'react';
-import { neonCursor } from 'threejs-toys';
-import Navbar from '../components/Navbar';
-import { Inter } from 'next/font/google';
+import React from 'react';
+import Navbar from '@/components/Navbar';
+import { Quicksand } from 'next/font/google';
 
-const baseFont = Inter({ subsets: ['latin'] });
+const baseFont = Quicksand({ subsets: ['latin'] });
 
 export const metadata = {
   robots: {
@@ -39,35 +38,16 @@ type RootLayoutProps = {
   children: React.ReactNode;
 }
 
-const RootLayout = ({ children }: RootLayoutProps) => {
-
-  React.useEffect(() => {
-    neonCursor({
-      el: document.getElementById('app'),
-      shaderPoints: 16,
-      curvePoints: 80,
-      curveLerp: 0.5,
-      radius1: 5,
-      radius2: 30,
-      velocityTreshold: 10,
-      sleepRadiusX: 100,
-      sleepRadiusY: 100,
-      sleepTimeCoefX: 0.0025,
-      sleepTimeCoefY: 0.0025
-    })
-  }, [])
-
-  return (
-    <Fragment>
-      <S.GlobalStyle />
-      <S.Html>
-        <S.Body className={baseFont.className}>
-          <Navbar />
-          {children}
-        </S.Body>
-      </S.Html>
-    </Fragment>
-  )
-}
+const RootLayout = ({ children }: RootLayoutProps) => (
+  <>
+    <S.GlobalStyle />
+    <S.Html>
+      <S.Body className={baseFont.className}>
+        <Navbar />
+        {children}
+      </S.Body>
+    </S.Html>
+  </>
+);
 
 export default RootLayout;

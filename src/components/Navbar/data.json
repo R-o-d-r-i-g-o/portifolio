@@ -1,0 +1,18 @@
+[
+  {
+    "text": "About",
+    "href": "/"
+  },
+  {
+    "text": "Works",
+    "href": "/about"
+  },
+  {
+    "text": "Job experience",
+    "href": "/contact"
+  },
+  {
+    "text": "Contact",
+    "href": "/contact"
+  }
+]
