@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Tilt } from 'react-tilt';
 import Link from "next/link";
-import { TILT_OPTIONS } from '@/utils/consts';
+import { COLORS, TILT_OPTIONS } from '@/utils/consts';
 import { BiSun, BiMoon, BiMenu } from "react-icons/bi";
 
 export const Header = styled.header`
@@ -33,7 +33,7 @@ export const Container = styled.div`
   height: 40px;
   width: 40px;
   border-radius: 12px;
-  background: #fbd38d;
+  background: ${COLORS.primary};
   display: flex;
 `;
 
@@ -100,7 +100,7 @@ export const Item = styled(Link)`
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #fbd38d;
+    background: ${COLORS.primary};
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }

@@ -10,3 +10,9 @@ export const TILT_OPTIONS = {
   axis:        null,   // What axis should be disabled. Can be X or Y.
   reset:       true,    // If the tilt effect has to be reset on exit.
 }
+
+export const COLORS = {
+  primary: '#A0A0A0',
+  secondary: '#00FF00',
+  tertiary: '#0000FF',
+};
