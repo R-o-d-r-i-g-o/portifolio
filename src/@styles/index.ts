@@ -9,6 +9,21 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
   }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #232943;
+    top: 0;
+    border: 3px solid white;
+    border-radius: 50px;
+  }
 `;
 
 const Html = styled.html.attrs({ lang: 'en' })``;
