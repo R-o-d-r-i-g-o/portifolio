@@ -1,19 +1,27 @@
 "use client"
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocalStorage } from "usehooks-ts";
+import { darkTheme } from "../themes/darkTheme";
+import { defaultTheme } from "../themes/defaultTheme";
 import menuOpitons from './data.json'
 import * as S from './styles';
 
 const Navbar = () => {
+  const [, setTheme] = useLocalStorage("theme", defaultTheme);
   const [changeTheme, setChangeTheme] = useState<boolean>(false);
+
+  useEffect(() => {
+    setTheme(changeTheme ? darkTheme : defaultTheme);
+  }, [changeTheme]);
 
   return (
     <S.Header>
       <S.Nav>
         <S.Options >
-          {menuOpitons.map(({text, href}) => (
-            <S.Item key={text} href={href}>
-              {text}
+          {menuOpitons.map(({label, ref}) => (
+            <S.Item key={label} href={ref}>
+              {label}
             </S.Item>
           ))}
         </S.Options>

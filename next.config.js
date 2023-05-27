@@ -1,7 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  compiler: { 
+    language: 'typescript',
+    styledComponents: true, 
+    ssr:true
+  },
   experimental: {
-    esmExternals: true
+    appDir: true,
+    typedRoutes: true,
   }
 }
 

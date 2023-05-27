@@ -1,3 +1,5 @@
+"use client"
+
 import styled from 'styled-components';
 import { Tilt } from 'react-tilt';
 import Link from "next/link";
@@ -19,7 +21,7 @@ export const Nav = styled.nav`
   padding: 0 10px;
   width: 775px;
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 775px) {
     justify-content: end;
     width: 100%
   }
@@ -44,6 +46,7 @@ export const ButtonSet = styled.div`
 `;
 
 export const ImageView = styled(Container)`
+  color: ${({ theme }) => theme.textColor};
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -75,7 +78,7 @@ export const Options = styled.div`
   gap: 20px;
   width: fit-content;
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 775px) {
     display: none;
   }
 `;
