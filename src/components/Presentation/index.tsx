@@ -1,25 +1,18 @@
-import React, { useRef, useEffect } from "react";
-import { PerspectiveCamera, RenderTexture, Text } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
+import React from "react";
+import { PerspectiveCamera, RenderTexture, Image } from "@react-three/drei";
 
 const Cube = () => {
-  const textRef = useRef();
 
-  useFrame(
-    (state) =>
-      (textRef.current.position.x = Math.sin(state.clock.elapsedTime) * 2)
-  );
-  
   return (
     <mesh>
       <boxGeometry />
       <meshStandardMaterial>
-        <RenderTexture attach="map">
+        <RenderTexture attach="map" sourceFile={undefined}>
           <PerspectiveCamera makeDefault position={[0, 0, 5]} />
-          <color attach="background" args={["#dc9dcd"]} />
-          <Text ref={textRef} fontSize={3} color="#555">
-            hello
-          </Text>
+            <Image 
+              url="https://avatars.githubusercontent.com/u/89111957?v=4"
+              scale={[5, 5]}
+            />
         </RenderTexture>
       </meshStandardMaterial>
     </mesh>
