@@ -8,6 +8,10 @@ import { BiSun, BiMoon, BiMenu } from "react-icons/bi";
 
 export const Header = styled.header`
   position: fixed;
+  z-index: 2;
+  background: ${true ? 'rgba(255, 255, 255, 0.25)' : '#20202380'};
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   height: 56px;
   width: 100%;
 `;
@@ -87,7 +91,7 @@ export const Item = styled(Link)`
   cursor: pointer;
   line-height: 18px;
   text-decoration: none;
-  color: #1a202c;
+  color: ${({theme}) => theme.textColor};
   font-weight: 600;
   font-size: 16px;
 

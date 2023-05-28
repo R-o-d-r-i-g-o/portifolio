@@ -38,6 +38,7 @@ const Main = styled.main`
   width: 750px;
 
   @media screen and (max-width: 775px) {
+    padding: 56px 20px 0;
     width: 100%;
   }
 `;
