@@ -60,18 +60,21 @@ export const ImageView = styled(Container)`
 // TODO: refatorar essa parte
 export const Dark = styled(BiMoon)`
   margin: auto;
+  color: ${({ theme }) => theme.bodyColor};
   height: 20px;
   width: 20px;
 `;
 
 export const Ligth = styled(BiSun)`
   margin: auto;
+  color: ${({ theme }) => theme.bodyColor};
   height: 20px;
   width: 20px;
 `;
 
 export const Menu = styled(BiMenu)`
   margin: auto;
+  color: ${({ theme }) => theme.bodyColor};
   height: 20px;
   width: 20px;
 `;

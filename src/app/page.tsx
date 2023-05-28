@@ -1,15 +1,17 @@
 "use client"
 
-import React, { Suspense } from 'react';
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 import Presentation from '../components/Presentation';
+import JobExperience from '../components/JobExperience';
+import Tech from '../components/Skills';
 
 const Home = () => {
 
   return (
     <>
     <Presentation />
+    <JobExperience />
+    <Tech />
+
        
 
     fhsdjfhskj <br />
