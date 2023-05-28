@@ -9,16 +9,8 @@ const Home = () => {
 
   return (
     <>
-    <div style={{ height: 250, width: 250 }}>
-    <Canvas camera={{ position: [5, 5, 5], fov: 12 }}>
-      <Suspense fallback={null}>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[3, 2, 1]} />
-        <Presentation />
-        <OrbitControls enableZoom={false} autoRotate />
-      </Suspense>
-    </Canvas>
-    </div>
+    <Presentation />
+       
 
     fhsdjfhskj <br />
     fhsdjfhskj <br />
