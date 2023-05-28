@@ -2,7 +2,7 @@
 
 import Presentation from '../components/Presentation';
 import JobExperience from '../components/JobExperience';
-import Tech from '../components/Skills';
+import Skills from '../components/Skills';
 
 const Home = () => {
 
@@ -10,7 +10,7 @@ const Home = () => {
     <>
     <Presentation />
     <JobExperience />
-    <Tech />
+    <Skills />
 
        
 

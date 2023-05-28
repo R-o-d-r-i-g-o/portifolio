@@ -3,17 +3,15 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import technologies from './data.json';
+import CanvasLoader from "../Loader";
 import * as S from './styles';
 
 import {
   Decal,
   Float,
   OrbitControls,
-  Preload,
   useTexture,
 } from "@react-three/drei";
-
-import CanvasLoader from "../Loader";
 
 const Ball = ({ imgUrl }: { imgUrl: string }) => {
   const [decal] = useTexture([imgUrl]);
@@ -35,21 +33,19 @@ const Ball = ({ imgUrl }: { imgUrl: string }) => {
   );
 };
 
-const Tech = () => {
-  return (
-    <S.Container>
-      {technologies.map(({ name, icon }, index) => (
-        <S.Item key={index}>
-          <Canvas>
-            <Suspense fallback={<CanvasLoader />}>
-              <OrbitControls enableZoom={false}/>
-              <Ball imgUrl={icon} />
-            </Suspense>
-          </Canvas>
-        </S.Item>
-      ))}
-    </S.Container>
-  );
-};
+const Tech = () => (
+  <S.Container>
+    {technologies.map((icon, index) => (
+      <S.Item key={index}>
+        <Canvas>
+          <Suspense fallback={<CanvasLoader />}>
+            <OrbitControls enableZoom={false}/>
+            <Ball imgUrl={icon} />
+          </Suspense>
+        </Canvas>
+      </S.Item>
+    ))}
+  </S.Container>
+);
 
 export default Tech;
