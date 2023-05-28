@@ -11,6 +11,11 @@ import { Quicksand } from 'next/font/google';
 const baseFont = Quicksand({ subsets: ['latin'] });
 
 export const metadata = {
+  icon: {
+    rel: 'icon',
+    sizes: '32x32',
+    url: '../../public/favicon.ico',
+  },
   robots: {
     index: true,
     follow: true,

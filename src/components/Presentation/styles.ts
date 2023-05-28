@@ -5,9 +5,13 @@ import styled from 'styled-components';
 
 const Container = styled.div`
 
+
+
 `;
 
 const LeftDiv = styled.div`
+
+    height: 600px;
 
 `;
 
