@@ -25,7 +25,7 @@ const Ball = ({ imgUrl }: { imgUrl: string }) => {
         <meshStandardMaterial color="#fff8eb" />
         <Decal
           position={[0, 0, .5]}
-          scale={1}
+          scale={[-1, 1, 1]}
           map={decal}
         />
       </mesh>
