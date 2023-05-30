@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Web Application Develop",
+    "company_name": "React",
+    "icon": "vsc",
+    "iconBg": "#383E56",
+    "date": "2021 - Present",
+    "points": [
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers."
+    ]
+  },
+  {
+    "title": "UI/UX Design",
+    "company_name": "Figma",
+    "icon": "shopify",
+    "iconBg": "#383E56",
+    "date": "2021 - Present",
+    "points": [
+      "Design & organized web applications features using Figma and other related technologies.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Translate designs to code reviews and providing constructive feedback to other developers."
+    ]
+  },
+  {
+    "title": "Graphic Illustration Design",
+    "company_name": "Adobe Creative Cloud",
+    "icon": "cc",
+    "iconBg": "#E6DEDD",
+    "date": "2018 - Present",
+    "points": [
+      "Create modern attractive template for website.",
+      "Design logo, banners, posters, thumbnails, brand awareness, and everything matched your requirements.",
+      "Publications such as pakages, clothes, brochures, etc .",
+      "Material, flat, minimalism, abstract design."
+    ]
+  },
+  {
+    "title": "Video & Content Edit",
+    "company_name": "Youtube & Tiktok",
+    "icon": "tiktok",
+    "iconBg": "#E6DEDD",
+    "date": "2015 - Present",
+    "points": [
+      "Content edit & management, suitable for any platform.",
+      "Create intro & outro perfectly fit your profile.",
+      "2D & 3D transition, stunning effects."
+    ]
+  }
+]

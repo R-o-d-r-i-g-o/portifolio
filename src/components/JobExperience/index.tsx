@@ -6,7 +6,7 @@ import * as S from './styles';
 const JobExperience = () => (
   <S.Container>
     <S.Title>
-      Work
+      About me
     </S.Title>
     <S.BodyText>
       Rodolfo is a full-cycle software engineer and cloud associate based in Brazil, with a passion for
