@@ -29,7 +29,7 @@ const ExperienceCard = ({ experience }: { experience: experienceType }) => {
         <S.Company>
           <S.Logo
             src={experience.icon}
-            alt={experience.company_name}
+            //alt={experience.company_name}
           />
         </S.Company>
       }

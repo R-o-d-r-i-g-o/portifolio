@@ -3,6 +3,7 @@
 import Presentation from '../components/Presentation';
 import JobExperience from '../components/JobExperience';
 import Experience from '../components/Experience';
+import CardGrid from '../components/CardGrid';
 import Skills from '../components/Skills';
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
     <Presentation />
     <JobExperience />
     <Skills />
+    <CardGrid />
     <Experience />
 
        
