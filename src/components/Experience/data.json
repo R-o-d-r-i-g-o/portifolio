@@ -1,10 +1,23 @@
 [
   {
-    "title": "Web Application Develop",
-    "company_name": "React",
-    "icon": "vsc",
+    "title": "Development and Support Internship",
+    "company_name": "PHP, MySQL",
+    "icon": "Irroba",
     "iconBg": "#383E56",
-    "date": "2021 - Present",
+    "date": "2022",
+    "points": [
+      "Investigating and resolving issues reported by users or customers.",
+      "Contribute to enhancing the software by implementing new features and functionality.",
+      "Creating and maintaining technical documentation, including user guides, API documentation, and internal knowledge bases.",
+      "Work on fixing bugs and addressing software defects."
+    ]
+  },
+  {
+    "title": "Full Stak Developement",
+    "company_name": "Go, Csharp, React, TypeScript",
+    "icon": "Q2Bank & Q2Pay",
+    "iconBg": "#E6DEDD",
+    "date": "2022 - Present",
     "points": [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -13,40 +26,15 @@
     ]
   },
   {
-    "title": "UI/UX Design",
-    "company_name": "Figma",
-    "icon": "shopify",
-    "iconBg": "#383E56",
-    "date": "2021 - Present",
-    "points": [
-      "Design & organized web applications features using Figma and other related technologies.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Translate designs to code reviews and providing constructive feedback to other developers."
-    ]
-  },
-  {
-    "title": "Graphic Illustration Design",
-    "company_name": "Adobe Creative Cloud",
-    "icon": "cc",
+    "title": "Mobile Developement",
+    "company_name": "React Native, AWS",
+    "icon": "Unimed pay",
     "iconBg": "#E6DEDD",
-    "date": "2018 - Present",
+    "date": "2022 - Present",
     "points": [
-      "Create modern attractive template for website.",
-      "Design logo, banners, posters, thumbnails, brand awareness, and everything matched your requirements.",
-      "Publications such as pakages, clothes, brochures, etc .",
-      "Material, flat, minimalism, abstract design."
-    ]
-  },
-  {
-    "title": "Video & Content Edit",
-    "company_name": "Youtube & Tiktok",
-    "icon": "tiktok",
-    "iconBg": "#E6DEDD",
-    "date": "2015 - Present",
-    "points": [
-      "Content edit & management, suitable for any platform.",
-      "Create intro & outro perfectly fit your profile.",
-      "2D & 3D transition, stunning effects."
+      "Implement pipelines and increase test coverages by testing its functionalities.",
+      "Manage and work with UI/UX teams to design and implement payments solutions and dashboards.",
+      "Deploy environments and its envs in order to delivery white-label solutions."
     ]
   }
 ]
