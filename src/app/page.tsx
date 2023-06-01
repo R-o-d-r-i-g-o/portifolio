@@ -1,8 +1,8 @@
 "use client"
 
-import Presentation from '../components/Presentation';
 import JobExperience from '../components/JobExperience';
-import Experience from '../components/Experience';
+import Presentation from '../components/Presentation';
+import EmailSend from '../components/EmailSend';
 import CardGrid from '../components/CardGrid';
 import Skills from '../components/Skills';
 
@@ -14,8 +14,7 @@ const Home = () => {
     <JobExperience />
     <Skills />
     <CardGrid />
-    <Experience />
-
+    <EmailSend />
        
 
     fhsdjfhskj <br />

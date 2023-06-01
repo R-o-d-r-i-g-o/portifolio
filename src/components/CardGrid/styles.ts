@@ -1,6 +1,7 @@
 import React from 'react';
 
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import Link from 'next/link';
 
 const Container = styled.div`
   position: relative;
@@ -12,6 +13,15 @@ const Container = styled.div`
   gap: 20px;
   z-index: 1;
 `;
+
+// const Appear = keyframes`
+//   from {
+//     margin-top: 100px;
+//   }
+//   to {
+//     opacity: ;
+//   }
+// `;
 
 const Card = styled.div`
   height: 300px;
@@ -65,7 +75,7 @@ const BodyText = styled.p`
   margin: 10px;
 `;
 
-const HiperLink = styled.a`
+const HiperLink = styled.button`
   position: relative;
   display: inline-block;
   padding: 8px 20px;
@@ -75,6 +85,8 @@ const HiperLink = styled.a`
   border-radius: 20px;
   text-decoration: none;
   font-weight: 500;
+  border: none;
+  cursor: pointer;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
 `;
 
