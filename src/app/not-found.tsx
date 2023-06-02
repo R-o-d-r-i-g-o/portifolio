@@ -9,21 +9,31 @@ const defaultOptions = {
   loop: true,
   autoplay: true, 
   animationData: notFound,
-  rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice'
-  }
 };
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 93vh;
+`;
 
 const Animation = styled(Lottie as any).attrs({
   options: defaultOptions,
 })`
-  display: block;
-  margin: auto;
+  width: 200px;
+  height: 200px;
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
-const Works = () => <Animation />;
+const Works = () => (
+  <Container>
+    <Animation />;
+  </Container>
+);
+
 
 export default Works;
