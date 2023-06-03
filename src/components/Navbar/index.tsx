@@ -20,7 +20,7 @@ const Navbar = () => {
       <S.Nav>
         <S.Options >
           {menuOpitons.map(({label, ref}) => (
-            <S.Item key={label} href={ref}>
+            <S.Item key={label} href={ref as any}>
               {label}
             </S.Item>
           ))}
