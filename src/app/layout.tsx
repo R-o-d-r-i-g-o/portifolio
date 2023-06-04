@@ -5,6 +5,7 @@ import { GlobalStyle, Main } from '../components/themes/GlobalStyle'
 import Navbar from '@/components/Navbar';
 import { useLocalStorage } from "usehooks-ts";
 import { defaultTheme } from "../components/themes/defaultTheme";
+import StyledComponentsRegistry from '../lib/registry';
 import { ThemeProvider } from "styled-components";
 import { Quicksand } from 'next/font/google';
 
@@ -50,17 +51,39 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   const [theme] = useLocalStorage("theme", defaultTheme);
   
   return (
-    <ThemeProvider theme={theme}>
+    <StyledComponentsRegistry>
+      <ThemeProvider theme={theme} >
       <GlobalStyle />
-      <html lang="en">
-        <body className={baseFont.className}>
-          <Navbar />
-          <Main>
-            {children}
-          </Main>
-        </body>
-      </html>
-    </ThemeProvider>
+        <html lang="en">
+          <body className={baseFont.className}>
+              <video
+                autoPlay
+                muted
+                loop
+                style={{
+                  position: 'fixed',
+                  width: '100%',
+                  height: '100%',
+                  left: '50%',
+                  top: '50%',
+                  objectFit: 'cover',
+                  transform: 'translate(-50%, -50%)',
+                  zIndex: '-1'
+                }}
+              >
+                <source 
+                  src={'/videos/background-video.mp4'}
+                  type='video/mp4'
+                />
+              </video>
+              <Navbar />
+              <Main>
+                {children}
+              </Main>
+          </body>
+        </html>
+      </ThemeProvider>
+    </StyledComponentsRegistry>
   );
 }
 

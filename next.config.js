@@ -3,15 +3,15 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  compiler: { 
+  compiler: {
     language: 'typescript',
-    styledComponents: true, 
-    ssr:true
+    styledComponents: true,
+    ssr: true
   },
   experimental: {
     appDir: true,
     forceSwcTransforms: true,
-    typedRoutes: true,
+    typedRoutes: true
   }
 }
 
