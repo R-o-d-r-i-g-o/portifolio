@@ -27,7 +27,7 @@ const CardGrid = () => {
                 {card.description}
               </S.BodyText>
               <S.HiperLink 
-                onClick={() => router.push(card.redirect)}
+                onClick={() => router.push(card.redirect as any)}
                 type="button"  
               >
                 {card.call_to_action}

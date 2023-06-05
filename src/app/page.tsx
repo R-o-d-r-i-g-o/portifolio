@@ -4,195 +4,21 @@ import JobExperience from '../components/JobExperience';
 import Presentation from '../components/Presentation';
 import EmailSend from '../components/EmailSend';
 import CardGrid from '../components/CardGrid';
+import DownloadPDF from '../components/Documents';
+import ContactInfo from '../components/Contact';
 import Skills from '../components/Skills';
 
 const Home = () => {
 
   return (
     <>
-    <Presentation />
-    <JobExperience />
-    <Skills />
-    <CardGrid />
-    <EmailSend />
-       
-
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-    fhsdjfhskj <br />
-
+      <Presentation />
+      <JobExperience />
+      <Skills />
+      <DownloadPDF />
+      <CardGrid />
+      <EmailSend />
+      <ContactInfo />
     </>
   )
 };

@@ -15,6 +15,7 @@
     "drei": "^2.2.21",
     "eslint": "^8.0.1",
     "eslint-config-next": "13.4.3",
+    "file-saver": "^2.0.5",
     "framer-motion": "^10.12.12",
     "next": "^13.4.5-canary.0",
     "react": "18.2.0",
@@ -33,6 +34,7 @@
     "yarn": "^1.22.19"
   },
   "devDependencies": {
+    "@types/file-saver": "^2.0.5",
     "@types/node": "20.2.1",
     "@types/react": "18.2.7",
     "@types/react-dom": "18.2.4",

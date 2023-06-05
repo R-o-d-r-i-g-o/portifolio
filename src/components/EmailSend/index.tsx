@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import * as S from './styles';
 
 const EmailSend = () => {
   const handleClick = () => {
@@ -9,7 +10,15 @@ const EmailSend = () => {
   };
 
   return (
+    <S.Container>
+      <S.Line />
+
+    <br />
     <button onClick={handleClick}>Send Email</button>
+    <br />
+    <br />
+    <br />
+    </S.Container>
   );
 }
 

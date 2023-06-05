@@ -14,15 +14,6 @@ const Container = styled.div`
   z-index: 1;
 `;
 
-// const Appear = keyframes`
-//   from {
-//     margin-top: 100px;
-//   }
-//   to {
-//     opacity: ;
-//   }
-// `;
-
 const Card = styled.div`
   height: 300px;
   max-width: 225px;
@@ -54,7 +45,7 @@ const Content = styled.div`
   h2 {
     position: absolute;
     top: -20px;
-    right: 30px;
+    /* right: 30px; */
     font-size: 8em;
     color: rgba(255, 255, 255, .05);
     pointer-events: none;
