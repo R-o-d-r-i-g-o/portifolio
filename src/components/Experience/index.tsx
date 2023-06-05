@@ -24,7 +24,7 @@ const ExperienceCard = ({ experience }: { experience: experienceType }) => {
       contentStyle={{ background: "#1d1836" }}
       contentArrowStyle={{ borderRight: "7px solid #000" }}
       date={ <S.Date>{experience.date}</S.Date> as any }
-      iconStyle={{ background: experience.iconBg }}
+      iconStyle={{ background: 'white' /* experience.iconBg */ }}
       icon={
         <S.Company>
           <S.Logo

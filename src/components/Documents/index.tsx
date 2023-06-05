@@ -19,13 +19,13 @@ const DownloadPDF = () => {
     <S.Container>
       <AnimatedView>
         <S.Button onClick={handleRedirect}>
-          Link PDF
+          Access CV
           <S.LinkImg />
         </S.Button>
       </AnimatedView>
       <AnimatedView>
         <S.Button onClick={handleDownload}>
-          Download PDF
+          Download CV
           <S.DownloadImg />
         </S.Button>
       </AnimatedView>

@@ -1,4 +1,7 @@
 import React from "react";
+import { Button } from '../Documents/styles'
+import { Container as Cont } from '../Documents/styles';
+import { FaLinkedin, FaGithubSquare } from 'react-icons/fa';
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -11,4 +14,26 @@ const Line = styled.hr`
   
 `;
 
-export { Container, Line };
+const MediaSet = styled(Cont)`
+  margin-top: 10px;
+`;
+
+const Medias = styled(Button)`
+  width: fit-content;
+  border-radius: 8px;
+  padding: 8px;
+`;
+
+const LinkinImg = styled(FaLinkedin)`
+  color: white;
+  height: 25px;
+  width: 25px;
+`;
+
+const GithubImg = styled(FaGithubSquare)`
+  color: white;
+  height: 25px;
+  width: 25px;
+`;
+
+export { Container, Line, MediaSet, Medias, LinkinImg, GithubImg };
