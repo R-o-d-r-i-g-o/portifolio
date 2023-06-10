@@ -4,6 +4,7 @@ import { DefaultTheme } from "styled-components";
 
 export const defaultTheme: DefaultTheme = {
   name: "default",
+  bodyVideo: "/videos/background-video-white.mp4",
   borderRadius: "4px",
   bodyColor: "#ffffff",
   textColor: "#000000",

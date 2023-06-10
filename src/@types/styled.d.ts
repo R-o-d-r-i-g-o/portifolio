@@ -7,6 +7,7 @@ interface IPalette {
 declare module "styled-components" {
   export interface DefaultTheme {
     name: string;
+    bodyVideo: string,
     borderRadius: string;
     bodyColor: string;
     textColor: string;
