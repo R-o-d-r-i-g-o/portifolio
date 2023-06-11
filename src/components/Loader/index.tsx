@@ -8,7 +8,6 @@ const Loader = () => {
 
   return (
     <Html>
-      <S.CanvasLoad></S.CanvasLoad>
       <S.TextLoad>
         {progress.toFixed(0)}%
       </S.TextLoad>
