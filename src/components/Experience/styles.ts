@@ -57,14 +57,14 @@ const Logo = styled.img`
 `;
 
 const JobTitle = styled.h3`
-  color: white;
+  color: ${({ theme }) => theme.textColor};
   font-size: 24px;
   font-weight: bold;
   cursor: default;
 `;
 
 const Desc = styled.p`
-  color: ${({ theme }) => theme.bodyColor};
+  color: ${({ theme }) => theme.textColor};
   font-size: 16px;
   font-weight: 600;
   cursor: default;
@@ -82,7 +82,7 @@ const UnordedList = styled.ul`
 `;
 
 const Item = styled.li`
-  color: ${({ theme }) => theme.bodyColor};
+  color: ${({ theme }) => theme.textColor};
   font-size: 14px;
   padding-left: 0.25rem;
   letter-spacing: 0.05em;

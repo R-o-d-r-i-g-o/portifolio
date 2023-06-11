@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from '../Documents/styles'
 import { Container as Cont } from '../Documents/styles';
 import { FaLinkedin, FaGithubSquare } from 'react-icons/fa';
+import { GoMail } from 'react-icons/go'
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -36,4 +37,10 @@ const GithubImg = styled(FaGithubSquare)`
   width: 25px;
 `;
 
-export { Container, Line, MediaSet, Medias, LinkinImg, GithubImg };
+const GMailImg = styled(GoMail)`
+  color: white;
+  height: 25px;
+  width: 25px;
+`;
+
+export { Container, Line, MediaSet, Medias, LinkinImg, GithubImg, GMailImg };

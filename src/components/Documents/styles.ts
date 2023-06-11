@@ -17,27 +17,21 @@ const Container = styled.div`
 
 const Button = styled(HiperLink)`
   justify-content: space-around;
-  color: white;
   margin: auto;
   width: 180px;
   padding: 15px 10px;
+  box-shadow: ${({ theme }) => `20px 20px 50px rgba(${theme.bodyColorRGB}, .2)`};
   display: flex;
-  
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, .5);
-  border-top: 1px solid rgba(255, 255, 255, .5);
-  border-left: 1px solid rgba(255, 255, 255, .5);
-  background: rgba(0, 0, 0, .5);
-  backdrop-filter: bulr(5px);
 `;
 
 const LinkImg = styled(BiLink)`
-  color: white;
+  color: ${({ theme }) => theme.bodyColor};
   height: 15px;
   width: 15px;
 `;
 
 const DownloadImg = styled(BiDownload)`
-  color: white;
+  color: ${({ theme }) => theme.bodyColor};
   height: 15px;
   width: 15px;
 `;

@@ -4,8 +4,9 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
+import { defaultTheme } from "../themes/defaultTheme";
+import { useLocalStorage } from "usehooks-ts";
 import "react-vertical-timeline-component/style.min.css";
-
 import experiences from './data.json';
 import * as S from './styles';
 
@@ -19,12 +20,14 @@ type experienceType = {
 }
 
 const ExperienceCard = ({ experience }: { experience: experienceType }) => {
+  const [theme] = useLocalStorage("theme", defaultTheme);
+
   return (
     <VerticalTimelineElement
-      contentStyle={{ background: "#1d1836" }}
-      contentArrowStyle={{ borderRight: "7px solid #000" }}
+      contentStyle={{ background: theme.bodyColor }}
+      contentArrowStyle={{ borderRight: `7px solid ${theme.bodyColor}` }}
       date={ <S.Date>{experience.date}</S.Date> as any }
-      iconStyle={{ background: 'white' /* experience.iconBg */ }}
+      iconStyle={{ background: theme.bodyColor }}
       icon={
         <S.Company>
           <S.Logo
@@ -54,17 +57,21 @@ const ExperienceCard = ({ experience }: { experience: experienceType }) => {
   );
 };
 
-const Experience = () => (
-  <S.Card>
-    <VerticalTimeline lineColor="#151030">
-      {experiences.map((experience , index: number) => (
-        <ExperienceCard
-          key={index}
-          experience={experience}
-        />
-      ))}
-    </VerticalTimeline>
-  </S.Card>
-);
+const Experience = () => {
+  const [theme] = useLocalStorage("theme", defaultTheme);
+
+  return (
+    <S.Card>
+      <VerticalTimeline lineColor={theme.bodyColor}>
+        {experiences.map((experience , index: number) => (
+          <ExperienceCard
+            key={index}
+            experience={experience}
+          />
+        ))}
+      </VerticalTimeline>
+    </S.Card>
+  );
+}
 
 export default Experience;

@@ -5,8 +5,9 @@ import { DefaultTheme } from "styled-components";
 export const darkTheme: DefaultTheme = {
   name: "dark",
   bodyVideo: "/videos/background-video-black.mp4",
-  borderRadius: "4px",
+  bodyColorRGB: '255, 255, 255',
   bodyColor: "#121212",
+  textColorRGB: '0, 0, 0',
   textColor: "#a5a5a5",
   palette: {
     common: {

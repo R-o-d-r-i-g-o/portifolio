@@ -1,7 +1,5 @@
 import React from 'react';
-
-import styled, { keyframes } from 'styled-components';
-import Link from 'next/link';
+import styled from 'styled-components';
 
 const Container = styled.div`
   position: relative;
@@ -17,15 +15,15 @@ const Container = styled.div`
 const Card = styled.div`
   height: 300px;
   max-width: 225px;
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, .5);
+  box-shadow: ${({ theme }) => `20px 20px 50px rgba(${theme.bodyColorRGB}, .2)`};
   border-radius: 15px;
-  background: rgba(0, 0, 0, .5);
+  background: ${({ theme }) => `rgba(${theme.textColor}, .5)`};
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, .5);
-  border-left: 1px solid rgba(255, 255, 255, .5);
+  border-top: ${({ theme }) => `1px solid rgba(${theme.bodyColorRGB}, .5)`};
+  border-left: ${({ theme }) => `1px solid rgba(${theme.bodyColorRGB}, .5)`};
   backdrop-filter: bulr(5px);
 
   @media screen and (max-width: 766px) {
@@ -47,7 +45,7 @@ const Content = styled.div`
     top: -20px;
     /* right: 30px; */
     font-size: 8em;
-    color: rgba(255, 255, 255, .05);
+    color: ${({ theme }) => `rgba(${theme.bodyColorRGB}, .05)`} ;
     pointer-events: none;
   }
 
@@ -55,13 +53,13 @@ const Content = styled.div`
 
 const Title = styled.h3`
   font-size: 1.3em;
-  color: white;
+  color: ${({ theme }) => theme.textColor};
   z-index: 1;
 `;
 
 const BodyText = styled.p`
   font-size: .8em;
-  color: white;
+  color: ${({ theme }) => theme.textColor};
   font-weight: 300;   
   margin: 10px;
 `;
@@ -71,14 +69,14 @@ const HiperLink = styled.button`
   display: inline-block;
   padding: 8px 20px;
   margin-top: 15px;
-  background: white;
-  color: black;
+  background: ${({ theme }) => theme.textColor};
+  color: ${({ theme }) => theme.bodyColor};
   border-radius: 20px;
   text-decoration: none;
   font-weight: 500;
   border: none;
   cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+  box-shadow: ${({ theme }) => `0 5px 15px rgba(${theme.bodyColorRGB}, .2)`};
 `;
 
 export { Container, Card, Content, Title, BodyText, HiperLink };

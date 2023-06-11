@@ -1,6 +1,8 @@
 "use client"
 
 import React, { Suspense } from "react";
+import { defaultTheme } from "../themes/defaultTheme";
+import { useLocalStorage } from "usehooks-ts";
 import { Canvas } from "@react-three/fiber";
 import technologies from './data.json';
 import CanvasLoader from "../Loader";
@@ -15,14 +17,15 @@ import {
 
 const Ball = ({ imgUrl }: { imgUrl: string }) => {
   const [decal] = useTexture([imgUrl]);
+  const [theme] = useLocalStorage("theme", defaultTheme);
 
   return (
-    <Float speed={5}>
+    <Float speed={5} key={theme.bodyColor}>
       <ambientLight intensity={1} />
       <directionalLight position={[0, 0, .01]} />
       <mesh castShadow receiveShadow scale={2.5}>
         <icosahedronGeometry args={[1, 4]} />
-        <meshStandardMaterial color="#fff8eb" />
+        <meshStandardMaterial color={theme.bodyColor} />
         <Decal
           position={[0, 0, .5]}
           scale={[-1, 1, 1]}
