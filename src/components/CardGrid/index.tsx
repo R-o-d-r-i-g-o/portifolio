@@ -1,4 +1,4 @@
-import React, { lazy } from 'react';
+import React from 'react';
 
 import cards from './data.json';
 import { useRouter } from 'next/navigation';

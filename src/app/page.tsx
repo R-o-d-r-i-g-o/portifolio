@@ -5,7 +5,6 @@ import Presentation from '../components/Presentation';
 import EmailSend from '../components/EmailSend';
 import CardGrid from '../components/CardGrid';
 import DownloadPDF from '../components/Documents';
-import ContactInfo from '../components/Contact';
 import Skills from '../components/Skills';
 
 const Home = () => {
@@ -18,7 +17,6 @@ const Home = () => {
       <DownloadPDF />
       <CardGrid />
       <EmailSend />
-      <ContactInfo />
     </>
   )
 };

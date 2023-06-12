@@ -12,7 +12,7 @@ const DownloadPDF = () => {
     const fileId = '11yKvY3V6maZMbsJCR1IJDDWkXWfjDTM2-YJDrTqPoq0';
     const downloadUrl = `https://drive.google.com/uc?id=${fileId}&export=download`;
 
-    saveAs(downloadUrl, 'filename.pdf');
+    saveAs(downloadUrl, 'RodrigoMRibeiro_Resume.pdf');
   };
 
   return (
