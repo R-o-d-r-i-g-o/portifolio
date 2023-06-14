@@ -1,6 +1,6 @@
 "use client"
 
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Tilt } from 'react-tilt';
 import Link from "next/link";
 import { COLORS, TILT_OPTIONS } from '@/utils/consts';
@@ -9,7 +9,7 @@ import { BiSun, BiMoon, BiMenu } from "react-icons/bi";
 export const Header = styled.header`
   position: fixed;
   z-index: 2;
-  background: ${({ theme }) => `rgba(${theme.textColorRGB}, 0.25)`};
+  background: ${({ theme }) => `rgba(${theme.textColorRGB}, .25)`};
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   height: 56px;
@@ -52,7 +52,7 @@ export const ButtonSet = styled.div`
 export const ImageView = styled(Container)`
   color: ${({ theme }) => theme.textColor};
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 775px) {
     display: none;
   }
 `;
@@ -119,4 +119,28 @@ export const Item = styled(Link)`
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+`;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    right: -60px;
+  }
+  to {
+    opacity: 1;
+    right: 10px;
+  }
+`;
+
+export const MobileMenuOptions = styled(Header)`
+  animation: ${fadeIn} 0.5s ease-in-out forwards;
+  position: absolute;
+  padding: 20px;
+  gap: 10px;
+  border-radius: 20px 0 20px 20px;
+  height: fit-content;
+  width: fit-content; 
+  top: 80px;
+  display: flex;
+  flex-direction: column;
 `;
