@@ -62,8 +62,10 @@ const EmailSend = () => {
           </S.Form>
       </S.FormContainer>
       <S.MediaSet>
-        {data.map((item) => (
-          <AnimatedView>
+        {data.map((item, index) => (
+          <AnimatedView 
+            key={index}
+          >
             <a
               href={item.ref}
               aria-label={item.label}

@@ -6,10 +6,10 @@ import Link from "next/link";
 import { COLORS, TILT_OPTIONS } from '@/utils/consts';
 import { BiSun, BiMoon, BiMenu } from "react-icons/bi";
 
-export const Header = styled.header<{ changeTheme: boolean }>`
+export const Header = styled.header`
   position: fixed;
   z-index: 2;
-  background: ${props => props.changeTheme ? 'rgba(255, 255, 255, 0.25)' : 'rgba(0, 0, 0, 0.25)'};
+  background: ${({ theme }) => `rgba(${theme.textColorRGB}, 0.25)`};
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   height: 56px;

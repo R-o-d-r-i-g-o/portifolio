@@ -16,7 +16,7 @@ export const metadata = {
   icon: {
     rel: 'icon',
     sizes: '32x32',
-    url: '../../public/favicon.ico',
+    url: '/favicon.ico',
   },
   robots: {
     index: true,

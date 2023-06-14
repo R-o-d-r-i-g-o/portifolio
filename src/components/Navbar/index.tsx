@@ -16,7 +16,7 @@ const Navbar = () => {
   }, [changeTheme]);
 
   return (
-    <S.Header changeTheme={!changeTheme}>
+    <S.Header>
       <S.Nav>
         <S.Options >
           {menuOpitons.map(({label, ref}) => (
