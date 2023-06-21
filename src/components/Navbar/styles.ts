@@ -10,7 +10,6 @@ export const Header = styled.header`
   position: fixed;
   z-index: 2;
   background: ${({ theme }) => `rgba(${theme.textColorRGB}, .25)`};
-  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   height: 56px;
   width: 100%;
@@ -57,7 +56,6 @@ export const ImageView = styled(Container)`
   }
 `;
 
-// TODO: refatorar essa parte
 export const Dark = styled(BiMoon)`
   margin: auto;
   color: ${({ theme }) => theme.bodyColor};
@@ -123,24 +121,40 @@ export const Item = styled(Link)`
 
 const fadeIn = keyframes`
   from {
-    opacity: 0;
-    right: -60px;
+    opacity: .6;
+    top: -300px;
   }
   to {
     opacity: 1;
-    right: 10px;
+    top: 0px;
   }
 `;
 
-export const MobileMenuOptions = styled(Header)`
-  animation: ${fadeIn} 0.5s ease-in-out forwards;
-  position: absolute;
-  padding: 20px;
+const fadeOut = keyframes`
+  0% {
+    opacity: 1;
+    top: 0px;
+  }
+  100% {
+    opacity: .6;
+    top: -300px;
+  }
+`;
+
+export const MobileMenuOptions = styled(Header)<{ appear: boolean }>`
+  animation: ${(props) => props.appear ? fadeIn : fadeOut} 1.2s ease-in-out forwards;
+  box-shadow: ${({ theme }) => `2px 4px 4px rgba(${theme.bodyColorRGB}, .4)`};
+  z-index: 1;
+  left: 14px;
+  padding: 80px 20px 20px;
   gap: 10px;
-  border-radius: 20px 0 20px 20px;
+  border-radius: 0 0 20px 20px;
   height: fit-content;
   width: fit-content; 
-  top: 80px;
   display: flex;
   flex-direction: column;
+
+  @media screen and (min-width: 775px) {
+    display: none;
+  }
 `;
