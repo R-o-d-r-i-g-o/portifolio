@@ -8,6 +8,7 @@ const Container = styled.div`
   display: flex;
   gap: 10px;
   justify-content: center;
+  align-items: center;
 
   @media screen and (max-width: 450px) {
     gap: 15px;
@@ -17,7 +18,6 @@ const Container = styled.div`
 
 const Button = styled(HiperLink)`
   justify-content: space-around;
-  margin: auto;
   width: 180px;
   padding: 15px 10px;
   box-shadow: ${({ theme }) => `20px 20px 50px rgba(${theme.bodyColorRGB}, .2)`};

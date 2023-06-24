@@ -1,5 +1,5 @@
 import React from 'react';
-import { AnimatedView } from '../Navbar/styles';
+import TiltEffect from '../TiltEffect';
 import * as S from './styles';
 
 type payload = {
@@ -63,7 +63,8 @@ const EmailSend = () => {
       </S.FormContainer>
       <S.MediaSet>
         {data.map((item, index) => (
-          <AnimatedView 
+          <TiltEffect 
+            shouldStopOnResize
             key={index}
           >
             <a
@@ -76,7 +77,7 @@ const EmailSend = () => {
                 {item.icon}
               </S.Medias>
             </a>
-          </AnimatedView>
+          </TiltEffect>
         ))}
       </S.MediaSet>
     </S.Container>

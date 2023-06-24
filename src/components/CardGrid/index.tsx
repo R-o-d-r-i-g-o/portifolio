@@ -2,7 +2,7 @@ import React from 'react';
 
 import cards from './data.json';
 import { useRouter } from 'next/navigation';
-import { AnimatedView } from '../Navbar/styles';
+import TiltEffect from '../TiltEffect';
 import { SubTitle } from '../Presentation/styles';
 import * as S from './styles';
 
@@ -14,12 +14,12 @@ const CardGrid = () => {
       <SubTitle style={{ marginTop: 30, marginBottom: 10 }}>Other topics</SubTitle>
       <S.Container>
       {cards.map((card, index) => (
-        <AnimatedView key={index}>
+        <TiltEffect key={index}>
           <S.Card>
             <S.Content>
-              <h2>
+              <S.Marker>
                 {`0${index + 1}`}
-              </h2>
+              </S.Marker>
               <S.Title>
                 {card.title}
               </S.Title>
@@ -34,7 +34,7 @@ const CardGrid = () => {
               </S.HiperLink>
             </S.Content>
           </S.Card>
-        </AnimatedView>
+        </TiltEffect>
       ))}
       </S.Container>
     </>

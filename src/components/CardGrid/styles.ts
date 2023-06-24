@@ -39,16 +39,15 @@ const Content = styled.div`
   padding: 20px;
   text-align: center;
   transition: .5s;
+`;
 
-  h2 {
-    position: absolute;
-    top: -20px;
-    /* right: 30px; */
-    font-size: 8em;
-    color: ${({ theme }) => `rgba(${theme.bodyColorRGB}, .05)`} ;
-    pointer-events: none;
-  }
-
+const Marker = styled.h2`
+  position: absolute;
+  margin-top: -60px;
+  height: 146px;
+  font-size: 8em;
+  color: ${({ theme }) => `rgba(${theme.bodyColorRGB}, .05)`} ;
+  pointer-events: none;
 `;
 
 const Title = styled.h3`
@@ -79,5 +78,5 @@ const HiperLink = styled.button`
   box-shadow: ${({ theme }) => `0 5px 15px rgba(${theme.bodyColorRGB}, .2)`};
 `;
 
-export { Container, Card, Content, Title, BodyText, HiperLink };
+export { Container, Card, Content, Marker, Title, BodyText, HiperLink };
 
