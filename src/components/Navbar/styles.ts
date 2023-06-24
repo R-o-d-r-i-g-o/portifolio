@@ -1,10 +1,10 @@
 "use client"
 
 import styled, { keyframes } from 'styled-components';
-import { Tilt } from 'react-tilt';
-import Link from "next/link";
-import { COLORS, TILT_OPTIONS } from '@/utils/consts';
+import { COLORS } from '@/utils/consts';
 import { BiSun, BiMoon, BiMenu } from "react-icons/bi";
+import Link from "next/link";
+import css from 'styled-jsx/css';
 
 export const Header = styled.header`
   position: fixed;
@@ -29,10 +29,6 @@ export const Nav = styled.nav`
     width: 100%
   }
 `;
-
-export const AnimatedView = styled(Tilt).attrs({
-  options: TILT_OPTIONS
-})``;
 
 export const Container = styled.div`
   height: 40px;
@@ -141,8 +137,7 @@ const fadeOut = keyframes`
   }
 `;
 
-export const MobileMenuOptions = styled(Header)<{ appear: boolean }>`
-  animation: ${(props) => props.appear ? fadeIn : fadeOut} 1.2s ease-in-out forwards;
+export const MobileMenuOptions = styled(Header)<{ appear: boolean | undefined }>`
   box-shadow: ${({ theme }) => `2px 4px 4px rgba(${theme.bodyColorRGB}, .4)`};
   z-index: 1;
   left: 14px;
@@ -153,6 +148,7 @@ export const MobileMenuOptions = styled(Header)<{ appear: boolean }>`
   width: fit-content; 
   display: flex;
   flex-direction: column;
+  animation: ${({ appear }) => appear ? fadeIn : fadeOut} 1.2s ease-in-out forwards;
 
   @media screen and (min-width: 775px) {
     display: none;

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocalStorage } from "usehooks-ts";
 import { darkTheme } from "../themes/darkTheme";
+import TiltEffect from '../TiltEffect';
 import { defaultTheme } from "../themes/defaultTheme";
 import menuOpitons from './data.json'
 import * as S from './styles';
@@ -10,7 +11,7 @@ import * as S from './styles';
 const Navbar = () => {
   const [, setTheme] = useLocalStorage("theme", defaultTheme);
   const [changeTheme, setChangeTheme] = useState<boolean>(false);
-  const [showMobileNav, setShowMobileNav] = useState<boolean>(false);
+  const [showMobileNav, setShowMobileNav] = useState<boolean | undefined>();
 
   useEffect(() => {
     setTheme(changeTheme ? darkTheme : defaultTheme);
@@ -32,30 +33,32 @@ const Navbar = () => {
             ))}
           </S.Options>
           <S.ButtonSet>
-            <S.AnimatedView>
+            <TiltEffect shouldStopOnResize>
               <S.Container onClick={() => setChangeTheme((e) => !e)}>
                 {changeTheme ? <S.Ligth/> : <S.Dark />}
               </S.Container>
-            </S.AnimatedView>
-            <S.AnimatedView>
+            </TiltEffect>
+            <TiltEffect shouldStopOnResize>
               <S.ImageView onClick={() => setShowMobileNav((e) => !e)}>
                 <S.Menu />
               </S.ImageView>
-            </S.AnimatedView>
+            </TiltEffect>
           </S.ButtonSet>
         </S.Nav>
       </S.Header>
-      <S.MobileMenuOptions appear={showMobileNav}>
-        {menuOpitons.map(({label, ref}) => (
-          <S.Item 
-            key={label} 
-            href={ref as any}
-            onClick={() => setShowMobileNav(false)}
-          >
-            {label}
-          </S.Item>
-        ))}
-      </S.MobileMenuOptions>
+      {!!showMobileNav && (
+        <S.MobileMenuOptions appear={showMobileNav}>
+          {menuOpitons.map(({label, ref}) => (
+            <S.Item 
+              key={label} 
+              href={ref as any}
+              onClick={() => setShowMobileNav(false)}
+            >
+              {label}
+            </S.Item>
+          ))}
+        </S.MobileMenuOptions>
+      )}
     </>
   );
 };
