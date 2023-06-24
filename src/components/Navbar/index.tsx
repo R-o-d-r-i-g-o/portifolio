@@ -11,7 +11,7 @@ import * as S from './styles';
 const Navbar = () => {
   const [, setTheme] = useLocalStorage("theme", defaultTheme);
   const [changeTheme, setChangeTheme] = useState<boolean>(false);
-  const [showMobileNav, setShowMobileNav] = useState<boolean | undefined>();
+  const [showMobileNav, setShowMobileNav] = useState<boolean | undefined>(undefined);
 
   useEffect(() => {
     setTheme(changeTheme ? darkTheme : defaultTheme);
@@ -46,7 +46,7 @@ const Navbar = () => {
           </S.ButtonSet>
         </S.Nav>
       </S.Header>
-      {!!showMobileNav && (
+      {typeof showMobileNav !== 'undefined' && (
         <S.MobileMenuOptions appear={showMobileNav}>
           {menuOpitons.map(({label, ref}) => (
             <S.Item 

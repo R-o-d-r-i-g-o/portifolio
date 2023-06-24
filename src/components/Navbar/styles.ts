@@ -139,6 +139,7 @@ const fadeOut = keyframes`
 
 export const MobileMenuOptions = styled(Header)<{ appear: boolean | undefined }>`
   box-shadow: ${({ theme }) => `2px 4px 4px rgba(${theme.bodyColorRGB}, .4)`};
+  animation: ${({ appear }) => appear ? fadeIn : fadeOut} 1.2s ease-in-out forwards;
   z-index: 1;
   left: 14px;
   padding: 80px 20px 20px;
@@ -148,7 +149,6 @@ export const MobileMenuOptions = styled(Header)<{ appear: boolean | undefined }>
   width: fit-content; 
   display: flex;
   flex-direction: column;
-  animation: ${({ appear }) => appear ? fadeIn : fadeOut} 1.2s ease-in-out forwards;
 
   @media screen and (min-width: 775px) {
     display: none;
