@@ -3,7 +3,7 @@ import React from 'react';
 import cards from './data.json';
 import { useRouter } from 'next/navigation';
 import TiltEffect from '../TiltEffect';
-import { SubTitle } from '../Presentation/styles';
+import TextParagrath from '../TextParagrath';
 import * as S from './styles';
 
 const CardGrid = () => {
@@ -11,7 +11,10 @@ const CardGrid = () => {
 
   return (
     <>
-      <SubTitle style={{ marginTop: 30, marginBottom: 10 }}>Other topics</SubTitle>
+      <TextParagrath 
+        isBodyText
+        subTitle='Other topics'
+      />
       <S.Container>
       {cards.map((card, index) => (
         <TiltEffect key={index}>

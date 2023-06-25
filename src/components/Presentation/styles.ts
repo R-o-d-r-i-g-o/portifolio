@@ -30,21 +30,4 @@ const RigthDiv = styled.div`
   flex: 1;
 `;
 
-const Title = styled.h2`
-  font-size: 35px;
-  line-height: 40px;
-  font-weight: 900;
-`;
-
-const SubTitle = styled.h3`
-  font-size: 16px;
-  line-height: 40px;
-`;
-
-const Description = styled.p`
-  text-align: justify;
-  text-indent: 25px;
-  margin-top: 35px;
-`;
-
-export { Container, LeftDiv, RigthDiv, Title, SubTitle, Description };
+export { Container, LeftDiv, RigthDiv };

@@ -1,6 +1,7 @@
 import React, { Suspense, useRef } from 'react';
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import TextParagrath from '../TextParagrath';
 import { PerspectiveCamera, RenderTexture, Image } from "@react-three/drei";
 import * as S from './styles';
 
@@ -12,13 +13,16 @@ const Cube = () => {
   return (
     <S.Container>
       <S.LeftDiv>
-        <S.Title> Rodrigo M. Ribeiro </S.Title>
-        <S.SubTitle> Software Engineer | Cloud Associate </S.SubTitle>
-        <S.Description>
-          With expertise in coding and cloud computing, conquer
-          complex challenges, optimize performance, and deliver
-          cutting-edge solutions tailored for the cloud era.
-        </S.Description>
+        <TextParagrath 
+          title='Rodrigo M. Ribeiro'
+          subTitle='Software Engineer | Cloud Associate'
+          bodyText={
+            'Experienced full-stack software engineer proficient in diverse ' + 
+            'technologies and frameworks. Passionate about solving complex '  + 
+            'problems and delivering high-quality applications. Continuously' +
+            ' learning and adapting to industry advancements.'
+          }
+        />
       </S.LeftDiv>
       <S.RigthDiv>
       <div style={{ height: 250, width: 250, margin: '0 auto' }}>

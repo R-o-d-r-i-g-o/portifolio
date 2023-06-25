@@ -4,6 +4,7 @@ import React, { Suspense } from "react";
 import { defaultTheme } from "../themes/defaultTheme";
 import { useLocalStorage } from "usehooks-ts";
 import { Canvas } from "@react-three/fiber";
+import TextParagrath from "../TextParagrath";
 import technologies from './data.json';
 import CanvasLoader from "../Loader";
 import * as S from './styles';
@@ -37,18 +38,24 @@ const Ball = ({ imgUrl }: { imgUrl: string }) => {
 };
 
 const Tech = () => (
-  <S.Container>
-    {technologies.map((icon, index) => (
-      <S.Item key={index}>
-        <Canvas>
-          <Suspense fallback={<CanvasLoader />}>
-            <OrbitControls enableZoom={false}/>
-            <Ball imgUrl={icon} />
-          </Suspense>
-        </Canvas>
-      </S.Item>
-    ))}
-  </S.Container>
+  <>
+    <TextParagrath 
+      isBodyText
+      subTitle='Skills'
+    />
+    <S.Container>
+      {technologies.map((icon, index) => (
+        <S.Item key={index}>
+          <Canvas>
+            <Suspense fallback={<CanvasLoader />}>
+              <OrbitControls enableZoom={false}/>
+              <Ball imgUrl={icon} />
+            </Suspense>
+          </Canvas>
+        </S.Item>
+      ))}
+    </S.Container>
+  </>
 );
 
 export default Tech;
