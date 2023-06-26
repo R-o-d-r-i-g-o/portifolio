@@ -30,4 +30,10 @@ const RigthDiv = styled.div`
   flex: 1;
 `;
 
-export { Container, LeftDiv, RigthDiv };
+const AnimationView = styled.div`
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+`;
+
+export { Container, LeftDiv, RigthDiv, AnimationView };
