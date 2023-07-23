@@ -9,7 +9,7 @@ const Container = styled.div`
   width: 100%;
   flex-wrap: wrap;
   gap: 20px;
-  z-index: 1;
+  /* z-index: 1; */
 `;
 
 const Card = styled.div`
@@ -19,9 +19,6 @@ const Card = styled.div`
   border-radius: 15px;
   background: ${({ theme }) => `rgba(${theme.textColor}, .5)`};
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-top: ${({ theme }) => `1px solid rgba(${theme.bodyColorRGB}, .5)`};
   border-left: ${({ theme }) => `1px solid rgba(${theme.bodyColorRGB}, .5)`};
   backdrop-filter: bulr(5px);

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import cards from './data.json';
+import cards from '../../mocks/card-info.json';
 import { useRouter } from 'next/navigation';
 import TiltEffect from '../TiltEffect';
 import TextParagrath from '../TextParagrath';

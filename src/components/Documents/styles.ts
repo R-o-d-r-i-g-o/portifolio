@@ -12,19 +12,21 @@ const Container = styled.div`
   }
 `;
 
-const Button = styled(HiperLink)`
+const Button = styled.button`
   justify-content: space-around;
   width: 180px;
   padding: 15px 10px;
+  color: ${({ theme }) => theme.textColor}; 
   box-shadow: ${({ theme }) => `20px 20px 50px rgba(${theme.bodyColorRGB}, .2)`};
-  border: ${({ theme }) => `2px solid ${theme.textColor}`};
-  background: ${({ theme }) => theme.textColor};
-  color: ${({ theme }) => theme.bodyColor};
+  background: ${({ theme }) => `rgba(${theme.bodyColorRGB}, .2)`};
+  border-top: ${({ theme }) => `1px solid rgba(${theme.bodyColorRGB}, .5)`};
+  border-left: ${({ theme }) => `1px solid rgba(${theme.bodyColorRGB}, .5)`};
+  border-radius: 30px;
   display: flex;
 `;
 
 const LinkImg = styled(BiLink)`
-  color: ${({ theme }) => theme.bodyColor};
+  color: ${({ theme }) => theme.textColor};
   height: 15px;
   width: 15px;
 `;

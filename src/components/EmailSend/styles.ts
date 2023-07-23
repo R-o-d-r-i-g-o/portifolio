@@ -51,6 +51,9 @@ const SendEmail = styled(Button)`
   width: 100%;
   cursor: pointer;
   border-radius: 5px;
+  background: ${({ theme }) => theme.textColor};
+  color: ${({ theme }) => theme.bodyColor};
+  border: none;
   padding: 20px;
 `;
 
@@ -61,7 +64,6 @@ const Line = styled.hr`
 
 const MediaSet = styled(Cont)`
   margin-top: 10px;
-  margin-top: 0%;
   align-items: center;
   flex-direction: row;
   gap: 10px;
@@ -70,6 +72,8 @@ const MediaSet = styled(Cont)`
 const Medias = styled(Button)`
   width: fit-content;
   border-radius: 8px;
+  background: ${({ theme }) => theme.textColor};
+  border: none;
   padding: 8px;
 `;
 
