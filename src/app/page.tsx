@@ -2,9 +2,8 @@
 
 import Presentation from '../components/Presentation';
 import EmailSend from '../components/EmailSend';
-import CardGrid from '../components/CardGrid';
 import TextParagrath from '@/components/TextParagrath';
-import DownloadPDF from '../components/Documents';
+import RedirectToCv from '../components/Documents';
 import Skills from '../components/Skills';
 
 const Home = () => {
@@ -33,9 +32,8 @@ const Home = () => {
           'profile.'
         }
       />
+      <RedirectToCv />
       <Skills />
-      <DownloadPDF />
-      <CardGrid />
       <EmailSend />
     </>
   )

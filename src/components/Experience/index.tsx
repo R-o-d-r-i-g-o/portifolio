@@ -7,7 +7,7 @@ import {
 import { defaultTheme } from "../themes/defaultTheme";
 import { useLocalStorage } from "usehooks-ts";
 import "react-vertical-timeline-component/style.min.css";
-import experiences from './data.json';
+import experiences from '../../mocks/experiences.json';
 import * as S from './styles';
 
 type experienceType = {

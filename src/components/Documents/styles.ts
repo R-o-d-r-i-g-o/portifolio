@@ -4,16 +4,9 @@ import { BiLink, BiDownload } from "react-icons/bi";
 import styled from "styled-components";
 
 const Container = styled.div`
-  margin-top: 45px;
+  margin-top: 30px;
   display: flex;
-  gap: 10px;
   justify-content: center;
-  align-items: center;
-
-  @media screen and (max-width: 450px) {
-    gap: 15px;
-    flex-direction: column;
-  }
 `;
 
 const Button = styled(HiperLink)`

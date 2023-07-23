@@ -5,13 +5,27 @@ import { useLocalStorage } from "usehooks-ts";
 import { darkTheme } from "../themes/darkTheme";
 import TiltEffect from '../TiltEffect';
 import { defaultTheme } from "../themes/defaultTheme";
-import menuOpitons from './data.json'
+import menuOpitons from '../../mocks/menu-options.json';
 import * as S from './styles';
 
 const Navbar = () => {
   const [, setTheme] = useLocalStorage("theme", defaultTheme);
   const [changeTheme, setChangeTheme] = useState<boolean>(false);
   const [showMobileNav, setShowMobileNav] = useState<boolean | undefined>(undefined);
+
+  const bringOptions = () => (
+    <>
+        {menuOpitons.map(({label, ref}) => (
+        <S.Item 
+          key={label} 
+          href={ref as any}
+          onClick={() => setShowMobileNav(undefined)}
+        >
+          {label}
+        </S.Item>
+      ))}
+    </>
+  );
 
   useEffect(() => {
     setTheme(changeTheme ? darkTheme : defaultTheme);
@@ -22,15 +36,7 @@ const Navbar = () => {
       <S.Header>
         <S.Nav>
           <S.Options >
-            {menuOpitons.map(({label, ref}) => (
-              <S.Item 
-                key={label} 
-                href={ref as any}
-                onClick={() => setShowMobileNav(false)}
-              >
-                {label}
-              </S.Item>
-            ))}
+            {bringOptions()}
           </S.Options>
           <S.ButtonSet>
             <TiltEffect shouldStopOnResize>
@@ -48,15 +54,7 @@ const Navbar = () => {
       </S.Header>
       {typeof showMobileNav !== 'undefined' && (
         <S.MobileMenuOptions appear={showMobileNav}>
-          {menuOpitons.map(({label, ref}) => (
-            <S.Item 
-              key={label} 
-              href={ref as any}
-              onClick={() => setShowMobileNav(false)}
-            >
-              {label}
-            </S.Item>
-          ))}
+          {bringOptions()}
         </S.MobileMenuOptions>
       )}
     </>

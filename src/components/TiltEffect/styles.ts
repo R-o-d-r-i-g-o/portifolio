@@ -3,7 +3,7 @@
 import { Tilt } from 'react-tilt';
 import styled from "styled-components";
 
-const _TILT_OPTIONS = {
+const _TILT_OPTIONS = Object.freeze({
   reverse:     false,
   max:         80,
   perspective: 1000,
@@ -12,7 +12,7 @@ const _TILT_OPTIONS = {
   transition:  true,
   axis:        null,
   reset:       true,
-};
+});
 
 const AnimatedView = styled(Tilt).attrs({
   options: _TILT_OPTIONS

@@ -1,0 +1,20 @@
+[
+  {
+    "title": "projects",
+    "description": "Discover and explore my projects, where innovation meets creativity. Join me on a journey of inspiration and innovation.",
+    "call_to_action": "Show more",
+    "redirect": "/job-experience"
+  },
+  {
+    "title": "Experience",
+    "description": "Witness the culmination of my endeavors since my university days and delve into the captivating journey of my achievements. Join me to see this remarkable progress.",
+    "call_to_action": "Show more",
+    "redirect": ""
+  },
+  {
+    "title": "Contact",
+    "description": "Reach out today and let's connect to explore new opportunities and possibilities together. I look forward to hearing from you and embarking on an exciting collaboration journey.",
+    "call_to_action": "Show more",
+    "redirect": ""
+  }
+]

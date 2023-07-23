@@ -3,23 +3,16 @@
 import React from 'react';
 import * as S from './styles';
 
-type TiltEffectProps = {
+type Props = {
   children: React.ReactElement;
   shouldStopOnResize?: boolean;
 }
 
-const TiltEffect = ({ children, shouldStopOnResize = false }: TiltEffectProps) => {
-
+const TiltEffect = ({ children, shouldStopOnResize = false }: Props) => {
   const _PHONE_WIDTH = 775;
-  const [windowWidth, setWindowWidth] = React.useState<number>(0);
 
   const removeEffect = (): boolean => 
-    shouldStopOnResize && windowWidth < _PHONE_WIDTH;
-
-  window.addEventListener(
-    'resize', 
-    () => setWindowWidth(window.innerWidth)
-  );
+    shouldStopOnResize && window.innerWidth < _PHONE_WIDTH;
 
   return removeEffect() ? children : (
     <S.AnimatedView>
