@@ -5,7 +5,7 @@ import TextParagrath from '../TextParagrath';
 import { PerspectiveCamera, RenderTexture, Image } from "@react-three/drei";
 import * as S from './styles';
 
-import CanvasLoader from "../Loader";
+import CanvasLoader from "../CanvasProgressBar";
 
 const Cube = () => {
   const rendererRef = useRef();

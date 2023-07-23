@@ -3,7 +3,7 @@
 import { Html, useProgress } from "@react-three/drei";
 import * as S from './styles';
 
-const Loader = () => {
+const CanvasProgressBar = () => {
   const { progress } = useProgress();
 
   return (
@@ -15,4 +15,4 @@ const Loader = () => {
   );
 };
 
-export default Loader;
+export default CanvasProgressBar;
