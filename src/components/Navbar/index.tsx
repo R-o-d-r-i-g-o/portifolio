@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import { useLocalStorage } from "usehooks-ts";
-import { darkTheme } from "../themes/darkTheme";
+import { darkTheme } from "../../themes/darkTheme";
 import TiltEffect from '../TiltEffect';
-import { defaultTheme } from "../themes/defaultTheme";
+import { defaultTheme } from "../../themes/defaultTheme";
 import menuOpitons from '../../mocks/menu-options.json';
 import * as S from './styles';
 

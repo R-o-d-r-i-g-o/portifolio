@@ -1,7 +1,7 @@
 "use client"
 
 import React, { Suspense } from "react";
-import { defaultTheme } from "../themes/defaultTheme";
+import { defaultTheme } from "../../themes/defaultTheme";
 import { useLocalStorage } from "usehooks-ts";
 import { Canvas } from "@react-three/fiber";
 import TextParagrath from "../TextParagrath";

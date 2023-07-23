@@ -11,6 +11,7 @@ const Home = () => {
   return (
     <>
       <Presentation />
+      <RedirectToCv />
       <TextParagrath 
         isBodyText
         subTitle='About me'
@@ -32,7 +33,6 @@ const Home = () => {
           'profile.'
         }
       />
-      <RedirectToCv />
       <Skills />
       <EmailSend />
     </>

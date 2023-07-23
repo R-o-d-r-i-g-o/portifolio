@@ -1,31 +1,17 @@
-import React from "react";
+import React from 'react';
+import * as S from './styles';
 
-type VideoProps = {
+type Props = {
   src: string;
 }
 
-const Video = ({ src }: VideoProps) => (
-  <video
-    key={src}
-    autoPlay
-    muted
-    loop
-    style={{
-      position: 'fixed',
-      width: '100%',
-      height: '100%',
-      left: '50%',
-      top: '50%',
-      objectFit: 'cover',
-      transform: 'translate(-50%, -50%)',
-      zIndex: '-1'
-    }}
-  >
+const Video = ({src}: Props) => (
+  <S.Video key={src}>
     <source 
       src={src}
       type='video/mp4'
     />
-  </video>
+  </S.Video>
 )
 
 export default Video;

@@ -1,10 +1,10 @@
 "use client"
 
 import React from 'react';
-import { GlobalStyle, Main } from '../components/themes/GlobalStyle'
+import { GlobalStyle, Main } from '../themes/GlobalStyle'
 import Navbar from '@/components/Navbar';
 import { useLocalStorage } from "usehooks-ts";
-import { defaultTheme } from "../components/themes/defaultTheme";
+import { defaultTheme } from "../themes/defaultTheme";
 import BackgroundVideo from '../components/BackgroundVideo';
 import StyledComponentsRegistry from '../lib/registry';
 import { ThemeProvider } from "styled-components";

@@ -4,7 +4,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
-import { defaultTheme } from "../themes/defaultTheme";
+import { defaultTheme } from "../../themes/defaultTheme";
 import { useLocalStorage } from "usehooks-ts";
 import "react-vertical-timeline-component/style.min.css";
 import experiences from '../../mocks/experiences.json';

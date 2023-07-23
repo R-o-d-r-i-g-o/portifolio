@@ -64,6 +64,7 @@ const MediaSet = styled(Cont)`
   margin-top: 0%;
   align-items: center;
   flex-direction: row;
+  gap: 10px;
 `;
 
 const Medias = styled(Button)`
