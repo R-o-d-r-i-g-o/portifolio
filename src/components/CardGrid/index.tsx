@@ -11,7 +11,7 @@ const CardGrid = () => {
 
   return (
     <>
-      <TextParagrath 
+      <TextParagrath
         isBodyText
         subTitle='Other topics'
       />
