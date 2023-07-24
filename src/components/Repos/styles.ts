@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react';
+import { Modal } from 'antd';
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -86,6 +87,15 @@ const HiperLink = styled.button`
   box-shadow: ${({ theme }) => `0 5px 15px rgba(${theme.bodyColorRGB}, .2)`};
 `;
 
+const ModalItem = styled(Modal)`
+  .ant-btn-primary {
+    background: ${({ theme }) => theme.textColor};
+    :hover {
+      background: ${({ theme }) => theme.textColor};
+    }
+  }
+`;
+
 const ExternalLink = styled(HiperLink)`
   background: transparent;
   border: 1px solid ${({ theme }) => theme.textColor};
@@ -100,6 +110,7 @@ export {
   Title,
   BodyText,
   ButtonContaier,
+  ModalItem,
   HiperLink,
   ExternalLink
 };
