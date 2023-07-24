@@ -2,7 +2,7 @@
   {
     "title": "Development and Support Internship",
     "company_name": "PHP, MySQL",
-    "icon": "/irroba_logo.png",
+    "icon": "/logos/irroba_logo.png",
     "iconBg": "#383E56",
     "date": "2022",
     "points": [
@@ -14,7 +14,7 @@
   {
     "title": "Full Stak Developement",
     "company_name": "Go, Csharp, React, TypeScript",
-    "icon": "/q2_logo.png",
+    "icon": "/logos/q2_logo.png",
     "iconBg": "#E6DEDD",
     "date": "2022 - Present",
     "points": [
@@ -27,7 +27,7 @@
   {
     "title": "Mobile Developement",
     "company_name": "React Native, AWS",
-    "icon": "/unimed_logo.png",
+    "icon": "/logos/unimed_logo.png",
     "iconBg": "#E6DEDD",
     "date": "2022 - Present",
     "points": [

@@ -1,29 +1,105 @@
 'use client'
 
+import React from 'react';
 import styled from "styled-components";
-import { Card, Title, HiperLink } from '../CardGrid/styles';
 
 const Container = styled.div`
+  position: relative;
   display: flex;
-  gap: 10px;
-  flex-direction: column;
-  margin: 10px 0 40px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  gap: 20px;
 `;
 
-const RepoCard = styled(Card)`
+const ImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  max-height: 120px;
+  overflow: hidden;
+  border-radius: 10px;
+`;
+
+const CoverImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
+const Card = styled.div`
+  max-width: 225px;
+  box-shadow: ${({ theme }) => `20px 20px 50px rgba(${theme.bodyColorRGB}, .2)`};
+  border-radius: 15px;
+  background: ${({ theme }) => `rgba(${theme.textColorRGB}, .2)`};
+  overflow: hidden;
+  border-top: ${({ theme }) => `1px solid rgba(${theme.bodyColorRGB}, .5)`};
+  border-left: ${({ theme }) => `1px solid rgba(${theme.bodyColorRGB}, .5)`};
+  backdrop-filter: bulr(5px);
   min-width: 80%;
   margin: 0 auto;
   display: block;
   padding: 20px;
   height: fit-content;
+
+  @media screen and (max-width: 766px) {
+    max-width: 290px;
+  }
+
+  @media screen and (max-width: 500px) {
+    max-width: 350px;
+  }
 `;
 
-const Name = styled(Title)`
-  margin: 5px 10px;
+const Title = styled.h3`
+  font-size: 1.2em;
+  color: ${({ theme }) => theme.textColor};
+  z-index: 1;
+  margin: 5px 0 2px;
 `;
 
-const Link = styled(HiperLink)`
-  margin: 0;
+const BodyText = styled.p`
+  font-size: .8em;
+  color: ${({ theme }) => theme.textColor};
+  font-weight: 300;
 `;
 
-export { Container, RepoCard, Name, Link };
+const ButtonContaier = styled.div`
+  display: flex;
+  gap: 5px;
+`;
+
+const HiperLink = styled.button`
+  position: relative;
+  padding: 8px 20px;
+  margin-top: 15px;
+  background: ${({ theme }) => theme.textColor};
+  color: ${({ theme }) => theme.bodyColor};
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  box-shadow: ${({ theme }) => `0 5px 15px rgba(${theme.bodyColorRGB}, .2)`};
+`;
+
+const ExternalLink = styled(HiperLink)`
+  background: transparent;
+  border: 1px solid ${({ theme }) => theme.textColor};
+  color: ${({ theme }) => theme.textColor};
+`;
+
+export {
+  Container,
+  ImageContainer,
+  CoverImage,
+  Card,
+  Title,
+  BodyText,
+  ButtonContaier,
+  HiperLink,
+  ExternalLink
+};

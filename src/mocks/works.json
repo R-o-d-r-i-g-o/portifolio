@@ -1,0 +1,23 @@
+[
+  {
+    "imgUrl": "/works/angolist.png",
+    "imgAlt": "projeto angolist",
+    "title": "Angolist",
+    "description": "A React Native project utilizing AsyncStorage for local data storage and retrieval.",
+    "link": ""
+  },
+  {
+    "imgUrl": "/works/ddos.png",
+    "imgAlt": "projeto de simulação ddos",
+    "title": "Ddos simulator",
+    "description": "A Go project leveraging goroutines to concurrently handle multiple data streams, enabling efficient and parallel processing.",
+    "link": ""
+  },
+  {
+    "imgUrl": "/works/dsmovie.png",
+    "imgAlt": "projeto dsmovie tutorial",
+    "title": "Dsmovie site",
+    "description": "A Java project with a front-end built using Java Swing for GUI and a back-end implemented using Java Spring for server-side functionality.",
+    "link": ""
+  }
+]

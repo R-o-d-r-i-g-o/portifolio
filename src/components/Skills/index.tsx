@@ -6,7 +6,7 @@ import { useLocalStorage } from "usehooks-ts";
 import { Canvas } from "@react-three/fiber";
 import TextParagrath from "../TextParagrath";
 import technologies from './data.json';
-import CanvasLoader from "../Loader";
+import CanvasLoader from "../CanvasProgressBar";
 import * as S from './styles';
 
 import {
