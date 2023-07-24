@@ -17,7 +17,7 @@ const Container = styled.div`
 const ImageContainer = styled.div`
   position: relative;
   width: 100%;
-  max-width: 280px;
+  width: fit-content;
   height: auto;
   max-height: 120px;
   overflow: hidden;
@@ -25,8 +25,8 @@ const ImageContainer = styled.div`
 `;
 
 const CoverImage = styled.img`
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
 `;
 
