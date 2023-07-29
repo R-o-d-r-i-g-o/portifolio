@@ -1,11 +1,15 @@
-/** @type {import('next').NextConfig} */
+const nextTranslate = require('next-translate-plugin')
 
 const nextConfig = {
+  trailingSlash: true,
   reactStrictMode: true,
   swcMinify: true,
   compiler: {
     language: 'typescript',
-    styledComponents: true,
+    styledComponents: {
+      minify: true,
+      ssr: true
+    },
     ssr: true
   },
   experimental: {
@@ -15,4 +19,4 @@ const nextConfig = {
   }
 }
 
-module.exports = nextConfig
+module.exports = nextTranslate(nextConfig)

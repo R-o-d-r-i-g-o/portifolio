@@ -15,7 +15,7 @@ export const darkTheme: DefaultTheme = {
       white: "#ffffff",
     },
     primary: {
-      main: "#739fe6",
+      main: "#A0A0A0",
       contrastText: "#2c2c2c",
     },
     secondary: {

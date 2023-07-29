@@ -1,10 +1,9 @@
 "use client"
 
 import styled, { keyframes } from 'styled-components';
-import { COLORS } from '@/utils/consts';
+import { IoLanguage } from 'react-icons/io5';
 import { BiSun, BiMoon, BiMenu } from "react-icons/bi";
 import Link from "next/link";
-import css from 'styled-jsx/css';
 
 export const Header = styled.header`
   position: fixed;
@@ -34,7 +33,7 @@ export const Container = styled.div`
   height: 40px;
   width: 40px;
   border-radius: 12px;
-  background: ${COLORS.primary};
+  background: ${({ theme }) => theme.palette.primary.main};
   display: flex;
 `;
 
@@ -50,6 +49,13 @@ export const ImageView = styled(Container)`
   @media screen and (min-width: 775px) {
     display: none;
   }
+`;
+
+export const Lang = styled(IoLanguage)`
+  margin: auto;
+  color: ${({ theme }) => theme.bodyColor};
+  height: 20px;
+  width: 20px;
 `;
 
 export const Dark = styled(BiMoon)`
@@ -104,7 +110,7 @@ export const Item = styled(Link)`
     height: 2px;
     bottom: 0;
     left: 0;
-    background: ${COLORS.primary};
+    background: ${({ theme }) => theme.palette.primary.main};
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }

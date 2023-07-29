@@ -6,11 +6,13 @@ import { darkTheme } from "../../themes/darkTheme";
 import TiltEffect from '../TiltEffect';
 import { defaultTheme } from "../../themes/defaultTheme";
 import menuOpitons from '../../mocks/menu-options.json';
+import { toast } from 'react-toastify';
 import * as S from './styles';
 
 const Navbar = () => {
   const [, setTheme] = useLocalStorage("theme", defaultTheme);
   const [changeTheme, setChangeTheme] = useState<boolean>(false);
+  const [changeLang, setChangeLang] = useState<string>('en')
   const [showMobileNav, setShowMobileNav] = useState<boolean | undefined>(undefined);
 
   const bringOptions = () => (
@@ -27,6 +29,10 @@ const Navbar = () => {
     </>
   );
 
+  const showMessage = () => {
+    toast("jfksdklfjkk")
+  };
+
   useEffect(() => {
     setTheme(changeTheme ? darkTheme : defaultTheme);
   }, [changeTheme]);
@@ -39,6 +45,11 @@ const Navbar = () => {
             {bringOptions()}
           </S.Options>
           <S.ButtonSet>
+            <TiltEffect shouldStopOnResize>
+              <S.Container onClick={showMessage}>
+                <S.Lang/>
+              </S.Container>
+            </TiltEffect>
             <TiltEffect shouldStopOnResize>
               <S.Container onClick={() => setChangeTheme((e) => !e)}>
                 {changeTheme ? <S.Ligth/> : <S.Dark />}

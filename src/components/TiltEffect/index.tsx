@@ -9,10 +9,25 @@ type Props = {
 }
 
 const TiltEffect = ({ children, shouldStopOnResize = false }: Props) => {
-  const _PHONE_WIDTH = 775;
+  const _PHONE_WIDTH = 768;
 
-  const removeEffect = (): boolean => 
-    shouldStopOnResize && window.innerWidth < _PHONE_WIDTH;
+  const [windowWidth, setWindowWidth] = React.useState(0);
+
+  React.useEffect(() => {
+    const updateWindowWidth = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    updateWindowWidth();
+    window.addEventListener('resize', updateWindowWidth);
+
+    return () => {
+      window.removeEventListener('resize', updateWindowWidth);
+    };
+  }, []);
+
+  const removeEffect = (): boolean =>
+    shouldStopOnResize && windowWidth < _PHONE_WIDTH;
 
   return removeEffect() ? children : (
     <S.AnimatedView>

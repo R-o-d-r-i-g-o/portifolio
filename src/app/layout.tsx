@@ -8,7 +8,12 @@ import { defaultTheme } from "../themes/defaultTheme";
 import BackgroundVideo from '../components/BackgroundVideo';
 import StyledComponentsRegistry from '../lib/registry';
 import { ThemeProvider } from "styled-components";
+import { ToastContainer } from "react-toastify";
 import { Quicksand } from 'next/font/google';
+import { _TOAST_OPTIONS } from '../utils/consts';
+import { appWithTranslation } from 'next-i18next'
+
+import 'react-toastify/dist/ReactToastify.css';
 
 const baseFont = Quicksand({ subsets: ['latin'] });
 
@@ -44,12 +49,11 @@ export const metadata = {
              + 'various projects and contributions I have made throughout my career.',
 }
 
-type RootLayoutProps = {
+const RootLayout = ({ children }: {
   children: React.ReactNode;
-}
-
-const RootLayout = ({ children }: RootLayoutProps) => {
+}) => {
   const [theme] = useLocalStorage("theme", defaultTheme);
+  const isDarkTheme = theme.bodyColor === '#121212';
 
   return (
     <StyledComponentsRegistry>
@@ -61,6 +65,10 @@ const RootLayout = ({ children }: RootLayoutProps) => {
             <Navbar />
             <Main>
               {children}
+              <ToastContainer
+                { ..._TOAST_OPTIONS }
+                theme={isDarkTheme ? 'dark': 'light'}
+              />
             </Main>
           </body>
         </html>
@@ -69,4 +77,4 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   );
 }
 
-export default RootLayout;
+export default appWithTranslation(RootLayout as any);

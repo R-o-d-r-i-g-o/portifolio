@@ -15,7 +15,7 @@ export const defaultTheme: DefaultTheme = {
       white: "#ffffff",
     },
     primary: {
-      main: "#3b82f6",
+      main: "#A0A0A0",
       contrastText: "#ffffff",
     },
     secondary: {

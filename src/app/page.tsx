@@ -4,9 +4,11 @@ import Presentation from '../components/Presentation';
 import EmailSend from '../components/EmailSend';
 import TextParagrath from '@/components/TextParagrath';
 import RedirectToCv from '../components/Documents';
+import useTranslation from 'next-translate/useTranslation'
 import Skills from '../components/Skills';
 
 const Home = () => {
+  const { t } = useTranslation('common')
 
   return (
     <>
@@ -14,7 +16,7 @@ const Home = () => {
       <RedirectToCv />
       <TextParagrath 
         isBodyText
-        subTitle='About me'
+        subTitle={t('capeta')}
         bodyText={
           'Rodrigo is a full-cycle software engineer and cloud associate based in Brazil, with a passion for '    +
           'building scalable and reliable systems. He possesses a strong background in developing, maintaining, ' +
