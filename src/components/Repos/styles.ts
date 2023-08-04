@@ -88,10 +88,27 @@ const HiperLink = styled.button`
 `;
 
 const ModalItem = styled(Modal)`
+  .ant-modal-content, .ant-modal-title {
+    background: ${({ theme }) => theme.bodyColor} !important;
+    color: ${({ theme }) => theme.textColor} !important;
+
+    svg {
+      color: ${({ theme }) => theme.textColor} !important;
+    }
+  }
+  .ant-btn-default {
+    background: transparent !important;
+    border-color: ${({ theme }) => theme.textColor} !important;
+    color: ${({ theme }) => theme.textColor} !important;
+    &:hover {
+      border-color: ${({ theme }) => theme.textColor} !important;
+      color: ${({ theme }) => theme.textColor} !important;
+    }
+  }
   .ant-btn-primary {
-    background: ${({ theme }) => theme.textColor};
-    :hover {
-      background: ${({ theme }) => theme.textColor};
+    background: ${({ theme }) => theme.textColor} !important;
+    &:hover {
+      background: ${({ theme }) => theme.textColor} !important;
     }
   }
 `;

@@ -1,12 +1,16 @@
+"use client"
+
 import React from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
+import "react-vertical-timeline-component/style.min.css";
+
 import { defaultTheme } from "../../themes/defaultTheme";
 import { useLocalStorage } from "usehooks-ts";
-import "react-vertical-timeline-component/style.min.css";
+import useTranslation from 'next-translate/useTranslation'
 import experiences from '../../mocks/experiences.json';
 import * as S from './styles';
 
@@ -21,35 +25,32 @@ type experienceType = {
 
 const ExperienceCard = ({ experience }: { experience: experienceType }) => {
   const [theme] = useLocalStorage("theme", defaultTheme);
+  const { t } = useTranslation('common');
 
   return (
     <VerticalTimelineElement
       contentStyle={{ background: theme.bodyColor }}
       contentArrowStyle={{ borderRight: `7px solid ${theme.bodyColor}` }}
-      date={ <S.Date>{experience.date}</S.Date> as any }
+      date={ <S.Date>{t(experience.date)}</S.Date> as any }
       iconStyle={{ background: theme.bodyColor }}
       icon={
         <S.Company>
-          <S.Logo
-            src={experience.icon}
-            //alt={experience.company_name}
-          />
+          <S.Logo src={t(experience.icon)} />
         </S.Company>
       }
     >
       <div>
         <S.JobTitle>
-          {experience.title}
+          {t(experience.title)}
         </S.JobTitle>
         <S.Desc>
-          {experience.company_name}
+          {t(experience.company_name)}
         </S.Desc>
       </div>
-
       <S.UnordedList>
         {experience.points.map((point, index) => (
           <S.Item key={index}>
-            {point}
+            {t(point)}
           </S.Item>
         ))}
       </S.UnordedList>

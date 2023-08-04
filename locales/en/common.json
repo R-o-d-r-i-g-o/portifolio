@@ -1,3 +1,80 @@
 {
-    "capeta": "junior"
+    "nav": {
+        "about": "About",
+        "works": "Works",
+        "job-experience": "Job experience"
+    },
+    "page": {
+        "occupation": "Software Engineer | Cloud Associate",
+        "main-description": "Experienced full-stack software engineer proficient in diverse technologies and frameworks. Passionate about solving complex problems and delivering high-quality applications. Continuously learning and adapting to industry advancements.",
+        "work-title": "Experience",
+        "work-description": "Rodrigo is a full-cycle software engineer and cloud associate based in Brazil, with a passion for building scalable and reliable systems. He possesses a strong background in developing, maintaining, and deploying payment systems and programs. Currently, his focus lies in exploring cloud solutions and their practical applications in solving real-life problems.",
+        "education-title": "Education",
+        "education-description": "One and a half years before securing his first job as a programmer, Rodrigo embarked on his software engineering journey by enrolling in the esteemed software engineering course at Uni-FACEF. Since then, he has diligently pursued practical experience through independent studies, separate from his academic and professional commitments. - For more details, explore the certifications section on my LinkedIn profile.",
+        "access-cv": "Access CV",
+        "email-title": "subject",
+        "skill-title": "Skills",
+        "email-body": "write me a message",
+        "email-button": "Send"
+    },
+    "works": {
+        "angolist": {
+            "img-url": "/works/angolist.png",
+            "img-alt": "projeto angolist",
+            "title": "Angolist",
+            "description": "A React Native project utilizing AsyncStorage for local data storage and retrieval.",
+            "details": "",
+            "link": ""
+        },
+        "ddos": {
+            "img-url": "/works/ddos.png",
+            "img-alt": "projeto ddos",
+            "title": "DDOs project",
+            "description": "A Go project leveraging goroutines to concurrently handle multiple data streams, enabling efficient and parallel processing.",
+            "details": "",
+            "link": ""
+        },
+        "ds-movie": {
+            "img-url": "/works/dsmovie.png",
+            "img-alt": "DS Movie project",
+            "title": "Angolist",
+            "description": "A Java project with a front-end and a back-end implemented using Java Spring for server-side functionality.",
+            "details": "",
+            "link": ""
+        }
+    },
+    "experience": {
+        "irroba": {
+            "title": "Development and Support Internship",
+            "company-name": "PHP, MySQL",
+            "icon": "/logos/irroba_logo.png",
+            "iconBg": "#383E56",
+            "date": "2022",
+            "point-1":  "Investigating and resolving issues reported by users or customers.",
+            "point-2": "Creating and maintaining technical documentation, including user guides, API documentation, and internal knowledge bases.",
+            "point-3": "Work on fixing bugs and addressing software defects."
+        },
+        "q2": {
+            "title": "Full Stak Developement",
+            "company-name": "Go, Csharp, React, TypeScript",
+            "iconBg": "#E6DEDD",
+            "icon": "/logos/q2_logo.png",
+            "date": "2022 - Present",
+            "point-1": "Developing and maintaining web applications using React.js and other related technologies.",
+            "point-2": "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+            "point-3": "Implementing responsive design and ensuring cross-browser compatibility.",
+            "point-4": "Participating in code reviews and providing constructive feedback to other developers."
+        },
+        "unimed": {
+            "title": "Mobile Developement",
+            "company-name": "React Native, AWS",
+            "iconBg": "#E6DEDD",
+            "icon": "/logos/unimed_logo.png",
+            "date": "2022 - Present",
+            "point-1": "Implement pipelines and increase test coverages by testing its functionalities.",
+            "point-2": "Contribute to enhancing the software by implementing new features and functionality.",
+            "point-3": "Manage and work with UI/UX teams to design and implement payments solutions and dashboards.",
+            "point-4": "Deploy environments and its envs in order to delivery white-label solutions."
+        }
+    }
 }

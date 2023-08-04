@@ -1,14 +1,14 @@
 [
   {
-    "label": "About",
+    "label": "nav.about",
     "ref": "/"
   },
   {
-    "label": "Works",
+    "label": "nav.works",
     "ref": "/works"
   },
   {
-    "label": "Job experience",
+    "label": "nav.job-experience",
     "ref": "/job-experience"
   },
   {

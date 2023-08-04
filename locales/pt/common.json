@@ -1,3 +1,80 @@
 {
-    "capeta": "teta"
+    "nav": {
+        "about": "Sobre",
+        "works": "Projetos",
+        "job-experience": "Experiência"
+    },
+    "page": {
+        "occupation": "Engenheiro de Software | Associado de Nuvem",
+        "main-description": "Experiente engenheiro de software full-stack proficiente em diversas tecnologias e frameworks. Apaixonado por resolver problemas complexos e entregar aplicações de alta qualidade. Continuamente aprendendo e se adaptando aos avanços da indústria.",
+        "work-title": "Experiência",
+        "work-description": "Rodrigo é um engenheiro de software full-cycle e associado em nuvem sediado no Brasil, com paixão por construir sistemas escaláveis e confiáveis. Ele possui uma sólida experiência no desenvolvimento, manutenção e implantação de sistemas e programas de pagamento. Atualmente, seu foco está em explorar soluções em nuvem e suas aplicações práticas na resolução de problemas do mundo real.",
+        "education-title": "Educação",
+        "education-description": "Um ano e meio antes de garantir seu primeiro emprego como programador, Rodrigo iniciou sua jornada em engenharia de software ao se matricular no renomado curso de engenharia de software na Uni-FACEF. Desde então, ele tem buscado diligentemente experiência prática por meio de estudos independentes, além de seus compromissos acadêmicos e profissionais. - Para mais detalhes, explore a seção de certificações no meu perfil do LinkedIn.",
+        "access-cv": "Acessar curriculo",
+        "email-title": "Assunto",
+        "skill-title": "Habilidades",
+        "email-body": "Envie me uma messagem",
+        "email-button": "Enviar"
+    },
+    "works": {
+        "angolist": {
+            "img-url": "/works/angolist.png",
+            "img-alt": "projeto angolist",
+            "title": "Angolist",
+            "description": "Um projeto React Native que utiliza AsyncStorage para armazenamento e recuperação de dados locais.",
+            "details": "",
+            "link": ""
+        },
+        "ddos": {
+            "img-url": "/works/angolist.png",
+            "img-alt": "projeto angolist",
+            "title": "Simulador de DDOS",
+            "description": "Um projeto Go que utiliza goroutines para lidar simultaneamente com várias transmissões de dados, permitindo um processamento eficiente e paralelo.",
+            "details": "",
+            "link": ""
+        },
+        "ds-movie": {
+            "img-url": "/works/angolist.png",
+            "img-alt": "projeto angolist",
+            "title": "DS Movie",
+            "description": "Um projeto Java com um front-end e um back-end implementados usando Java Spring para funcionalidade no lado do servidor.",
+            "details": "",
+            "link": ""
+        }            
+    },
+    "experience": {
+        "irroba": {
+            "title": "Estágio em Desenvolvimento e Suporte",
+            "company-name": "PHP, MySQL",
+            "icon": "/logos/irroba_logo.png",
+            "iconBg": "#383E56",
+            "date": "2022",
+            "point-1": "Investigar e resolver problemas relatados por usuários ou clientes.",
+            "point-2": "Criar e manter documentação técnica, incluindo guias do usuário, documentação de API e bases de conhecimento internas.",
+            "point-3": "Trabalhar na correção de bugs e solucionar defeitos de software."
+        },
+        "q2": {
+            "title": "Desenvolvimento Full Stack",
+            "company-name": "Go, Csharp, React, TypeScript",
+            "iconBg": "#E6DEDD",
+            "icon": "/logos/q2_logo.png",
+            "date": "2022 - Presente",
+            "point-1": "Desenvolver e manter aplicações web usando React.js e outras tecnologias relacionadas.",
+            "point-2": "Colaborar com equipes multifuncionais, incluindo designers, gerentes de produto e outros desenvolvedores, para criar produtos de alta qualidade.",
+            "point-3": "Implementar design responsivo e garantir compatibilidade entre navegadores.",
+            "point-4": "Participar de revisões de código e fornecer feedback construtivo para outros desenvolvedores."
+        },
+        "unimed": {
+            "title": "Desenvolvimento Mobile",
+            "company-name": "React Native, AWS",
+            "iconBg": "#E6DEDD",
+            "icon": "/logos/unimed_logo.png",
+            "date": "2022 - Presente",
+            "point-1": "Implementar pipelines e aumentar a cobertura de testes testando suas funcionalidades.",
+            "point-2": "Contribuir para melhorar o software implementando novos recursos e funcionalidades.",
+            "point-3": "Gerenciar e trabalhar com equipes de UI/UX para projetar e implementar soluções de pagamento e painéis.",
+            "point-4": "Implantar ambientes e seus ambientes para fornecer soluções de marca branca."
+        }
+    }
 }

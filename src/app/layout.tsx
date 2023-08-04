@@ -17,7 +17,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const baseFont = Quicksand({ subsets: ['latin'] });
 
-export const metadata = {
+const metadata = {
   icon: {
     rel: 'icon',
     sizes: '32x32',
@@ -78,3 +78,4 @@ const RootLayout = ({ children }: {
 }
 
 export default appWithTranslation(RootLayout as any);
+export { metadata };

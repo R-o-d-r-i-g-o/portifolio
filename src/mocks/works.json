@@ -1,26 +1,26 @@
 [
   {
-    "imgUrl": "/works/angolist.png",
-    "imgAlt": "projeto angolist",
-    "title": "Angolist",
-    "description": "A React Native project utilizing AsyncStorage for local data storage and retrieval.",
-    "details": "",
-    "link": ""
+    "imgUrl": "works.angolist.img-url",
+    "imgAlt": "works.angolist.img-alt",
+    "title": "works.angolist.title",
+    "description": "works.angolist.description",
+    "details": "works.angolist.details",
+    "link": "works.angolist.link"
   },
   {
-    "imgUrl": "/works/ddos.png",
-    "imgAlt": "projeto de simulação ddos",
-    "title": "Ddos simulator",
-    "description": "A Go project leveraging goroutines to concurrently handle multiple data streams, enabling efficient and parallel processing.",
-    "details": "",
-    "link": ""
+    "imgUrl": "works.ddos.img-url",
+    "imgAlt": "works.ddos.img-alt",
+    "title": "works.ddos.title",
+    "description": "works.ddos.description",
+    "details": "works.ddos.details",
+    "link": "works.ddos.link"
   },
   {
-    "imgUrl": "/works/dsmovie.png",
-    "imgAlt": "projeto dsmovie tutorial",
-    "title": "Dsmovie site",
-    "description": "A Java project with a front-end and a back-end implemented using Java Spring for server-side functionality.",
-    "details": "",
-    "link": ""
+    "imgUrl": "works.ds-movie.img-url",
+    "imgAlt": "works.ds-movie.img-alt",
+    "title": "works.ds-movie.title",
+    "description": "works.ds-movie.description",
+    "details": "works.ds-movie.details",
+    "link": "works.ds-movie.link"
   }
 ]

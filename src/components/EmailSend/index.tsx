@@ -1,5 +1,7 @@
 import React from 'react';
 import TiltEffect from '../TiltEffect';
+import Qrcode from '../Qrcode';
+import useTranslation from 'next-translate/useTranslation'
 import * as S from './styles';
 
 type payload = {
@@ -8,7 +10,9 @@ type payload = {
 }
 
 const EmailSend = () => {
+  const { t } = useTranslation('common')
   const [emailPayload, setEmailPayload] = React.useState({} as payload);
+  const [qrcodeLink, setQrcodeLink ] = React.useState('');
 
   const handleSubmit = () => {
     const emailReceiver = 'rodrigomarqribeiro@gmail.com';
@@ -43,12 +47,12 @@ const EmailSend = () => {
       <S.FormContainer>
         <S.Form>
             <S.Input
-              placeholder="Subject"
+              placeholder={t('page.email-title')}
               value={emailPayload.subject}
               onChange={e => setEmailPayload({ ...emailPayload, subject: e.target.value })}
             />
             <S.TextArea
-              placeholder="Write me a message"
+              placeholder={t('page.email-body')}
               rows={10}
               value={emailPayload.body}
               onChange={e => setEmailPayload({ ...emailPayload, body: e.target.value })}
@@ -57,7 +61,7 @@ const EmailSend = () => {
               type="submit"
               onClick={handleSubmit}
             >
-              Send
+              {t('page.email-button')}
             </S.SendEmail>
           </S.Form>
       </S.FormContainer>
@@ -68,10 +72,8 @@ const EmailSend = () => {
             key={index}
           >
             <a
-              href={item.ref}
               aria-label={item.label}
-              target="_blank"
-              rel="noopener"
+              onClick={() => setQrcodeLink(item.ref)}
             >
               <S.Medias>
                 {item.icon}
@@ -80,6 +82,7 @@ const EmailSend = () => {
           </TiltEffect>
         ))}
       </S.MediaSet>
+      <Qrcode link={qrcodeLink}/>
     </S.Container>
   );
 }

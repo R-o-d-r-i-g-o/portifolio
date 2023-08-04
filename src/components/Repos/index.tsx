@@ -2,12 +2,14 @@
 
 import React from 'react';
 import TiltEffect from '../TiltEffect';
+import useTranslation from 'next-translate/useTranslation'
 import works from '../../mocks/works.json';
 import * as S from './styles';
 
 const Card = () => {
-  const [isModalOpen, setIsModalOpen] =
-    React.useState<string>('');
+  const [isModalOpen, setIsModalOpen] = React.useState<string>('');
+  const { t } = useTranslation('common');
+
 
   const handleClose = () => {
     setIsModalOpen('');
@@ -21,12 +23,12 @@ const Card = () => {
             <S.Card>
               <S.ImageContainer>
                 <S.CoverImage
-                  src={item.imgUrl}
-                  alt={item.imgAlt}
+                  src={t(item.imgUrl)}
+                  alt={t(item.imgAlt)}
                 />
               </S.ImageContainer>
-              <S.Title>{item.title}</S.Title>
-              <S.BodyText>{item.description}</S.BodyText>
+              <S.Title>{t(item.title)}</S.Title>
+              <S.BodyText>{t(item.description)}</S.BodyText>
               <S.ButtonContaier>
                 <S.ExternalLink onClick={() => window.open(item.link)}>
                   github
@@ -43,7 +45,7 @@ const Card = () => {
             onOk={handleClose}
             onCancel={handleClose}
           >
-            {item.description}
+            {t(item.description)}
           </S.ModalItem>
         </div>
       ))}

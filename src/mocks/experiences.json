@@ -1,40 +1,40 @@
 [
   {
-    "title": "Development and Support Internship",
-    "company_name": "PHP, MySQL",
-    "icon": "/logos/irroba_logo.png",
+    "title": "experience.irroba.title",
+    "company_name": "experience.irroba.company-name",
     "iconBg": "#383E56",
-    "date": "2022",
+    "icon": "experience.irroba.icon",
+    "date": "experience.irroba.date",
     "points": [
-      "Investigating and resolving issues reported by users or customers.",
-      "Creating and maintaining technical documentation, including user guides, API documentation, and internal knowledge bases.",
-      "Work on fixing bugs and addressing software defects."
+      "experience.irroba.point-1",
+      "experience.irroba.point-2",
+      "experience.irroba.point-3"
     ]
   },
   {
-    "title": "Full Stak Developement",
-    "company_name": "Go, Csharp, React, TypeScript",
-    "icon": "/logos/q2_logo.png",
+    "title": "experience.q2.title",
+    "company_name": "experience.q2.company-name",
     "iconBg": "#E6DEDD",
-    "date": "2022 - Present",
+    "icon": "experience.q2.icon",
+    "date": "experience.q2.date",
     "points": [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers."
+      "experience.q2.point-1",
+      "experience.q2.point-2",
+      "experience.q2.point-3",
+      "experience.q2.point-4"
     ]
   },
   {
-    "title": "Mobile Developement",
-    "company_name": "React Native, AWS",
-    "icon": "/logos/unimed_logo.png",
+    "title": "experience.unimed.title",
+    "company_name": "experience.unimed.company-name",
     "iconBg": "#E6DEDD",
-    "date": "2022 - Present",
+    "icon": "experience.unimed.icon",
+    "date": "experience.unimed.date",
     "points": [
-      "Implement pipelines and increase test coverages by testing its functionalities.",
-      "Contribute to enhancing the software by implementing new features and functionality.",
-      "Manage and work with UI/UX teams to design and implement payments solutions and dashboards.",
-      "Deploy environments and its envs in order to delivery white-label solutions."
+      "experience.unimed.point-1",
+      "experience.unimed.point-2",
+      "experience.unimed.point-3",
+      "experience.unimed.point-4"
     ]
   }
 ]

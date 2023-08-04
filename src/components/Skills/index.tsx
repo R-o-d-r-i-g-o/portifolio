@@ -7,6 +7,7 @@ import { Canvas } from "@react-three/fiber";
 import TextParagrath from "../TextParagrath";
 import technologies from './data.json';
 import CanvasLoader from "../CanvasProgressBar";
+import useTranslation from 'next-translate/useTranslation'
 import * as S from './styles';
 
 import {
@@ -41,7 +42,7 @@ const Tech = () => (
   <>
     <TextParagrath 
       isBodyText
-      subTitle='Skills'
+      subTitle={useTranslation('common').t('page.skill-title')}
     />
     <S.Container>
       {technologies.map((icon, index) => (

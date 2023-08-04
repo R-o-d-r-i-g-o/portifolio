@@ -14,6 +14,10 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.bodyColor};
     color: ${({ theme }) => theme.textColor};
+
+    .ant-modal-mask, .ant-modal-wrap, .ant-modal-root {
+      background-color: rgba(${({theme}) => theme.bodyColorRGB}, 0.45) !important;
+    }
   }
 
   ::-webkit-scrollbar {
