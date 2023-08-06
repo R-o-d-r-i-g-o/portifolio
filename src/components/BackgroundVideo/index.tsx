@@ -1,17 +1,14 @@
-import React from 'react';
-import * as S from './styles';
+import React from 'react'
+import * as S from './styles'
 
 type Props = {
-  src: string;
+  src: string
 }
 
-const Video = ({src}: Props) => (
+const Video = ({ src }: Props) => (
   <S.Video key={src}>
-    <source 
-      src={src}
-      type='video/mp4'
-    />
+    <source src={src} type="video/mp4" />
   </S.Video>
 )
 
-export default Video;
+export default Video

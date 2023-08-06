@@ -1,9 +1,9 @@
-"use client"
+'use client'
 
-import styled, { keyframes } from 'styled-components';
-import { IoLanguage } from 'react-icons/io5';
-import { BiSun, BiMoon, BiMenu } from "react-icons/bi";
-import Link from "next/link";
+import styled, { keyframes } from 'styled-components'
+import { IoLanguage } from 'react-icons/io5'
+import { BiSun, BiMoon, BiMenu } from 'react-icons/bi'
+import Link from 'next/link'
 
 export const Header = styled.header`
   position: fixed;
@@ -12,7 +12,7 @@ export const Header = styled.header`
   backdrop-filter: blur(10px);
   height: 56px;
   width: 100%;
-`;
+`
 
 export const Nav = styled.nav`
   justify-content: space-between;
@@ -25,9 +25,9 @@ export const Nav = styled.nav`
 
   @media screen and (max-width: 775px) {
     justify-content: end;
-    width: 100%
+    width: 100%;
   }
-`;
+`
 
 export const Container = styled.div`
   height: 40px;
@@ -35,13 +35,13 @@ export const Container = styled.div`
   border-radius: 12px;
   background: ${({ theme }) => theme.palette.primary.main};
   display: flex;
-`;
+`
 
 export const ButtonSet = styled.div`
   display: flex;
   width: fit-content;
   gap: 10px;
-`;
+`
 
 export const ImageView = styled(Container)`
   color: ${({ theme }) => theme.textColor};
@@ -49,35 +49,35 @@ export const ImageView = styled(Container)`
   @media screen and (min-width: 775px) {
     display: none;
   }
-`;
+`
 
 export const Lang = styled(IoLanguage)`
   margin: auto;
   color: ${({ theme }) => theme.bodyColor};
   height: 20px;
   width: 20px;
-`;
+`
 
 export const Dark = styled(BiMoon)`
   margin: auto;
   color: ${({ theme }) => theme.bodyColor};
   height: 20px;
   width: 20px;
-`;
+`
 
 export const Ligth = styled(BiSun)`
   margin: auto;
   color: ${({ theme }) => theme.bodyColor};
   height: 20px;
   width: 20px;
-`;
+`
 
 export const Menu = styled(BiMenu)`
   margin: auto;
   color: ${({ theme }) => theme.bodyColor};
   height: 20px;
   width: 20px;
-`;
+`
 
 export const Options = styled.div`
   display: flex;
@@ -88,18 +88,18 @@ export const Options = styled.div`
   @media screen and (max-width: 775px) {
     display: none;
   }
-`;
+`
 
 export const Item = styled(Link)`
   cursor: pointer;
   line-height: 18px;
   text-decoration: none;
-  color: ${({theme}) => theme.textColor};
+  color: ${({ theme }) => theme.textColor};
   font-weight: 600;
   font-size: 16px;
 
   display: inline-block;
-  padding-bottom: .25rem;
+  padding-bottom: 0.25rem;
   position: relative;
 
   &::after {
@@ -119,7 +119,7 @@ export const Item = styled(Link)`
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-`;
+`
 
 const fadeIn = keyframes`
   from {
@@ -130,7 +130,7 @@ const fadeIn = keyframes`
     opacity: 1;
     top: 0px;
   }
-`;
+`
 
 const fadeOut = keyframes`
   0% {
@@ -141,22 +141,25 @@ const fadeOut = keyframes`
     opacity: .6;
     top: -300px;
   }
-`;
+`
 
-export const MobileMenuOptions = styled(Header)<{ appear: boolean | undefined }>`
+export const MobileMenuOptions = styled(Header)<{
+  appear: boolean | undefined
+}>`
   box-shadow: ${({ theme }) => `2px 4px 4px rgba(${theme.bodyColorRGB}, .4)`};
-  animation: ${({ appear }) => appear ? fadeIn : fadeOut} 1.2s ease-in-out forwards;
+  animation: ${({ appear }) => (appear ? fadeIn : fadeOut)} 1.2s ease-in-out
+    forwards;
   z-index: 1;
   left: 14px;
   padding: 80px 20px 20px;
   gap: 10px;
   border-radius: 0 0 20px 20px;
   height: fit-content;
-  width: fit-content; 
+  width: fit-content;
   display: flex;
   flex-direction: column;
 
   @media screen and (min-width: 775px) {
     display: none;
   }
-`;
+`

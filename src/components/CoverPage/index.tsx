@@ -1,24 +1,24 @@
-"use client"
+'use client'
 
-import React from "react";
-import * as S from './styles';
+import React from 'react'
+import * as S from './styles'
 
 type Props = {
-  lottie: object;
+  lottie: object
 }
 
 const Works = ({ lottie }: Props) => {
   const defaultOptions = {
     loop: true,
-    autoplay: true, 
-    animationData: lottie,
-  };
-    
+    autoplay: true,
+    animationData: lottie
+  }
+
   return (
-  <S.Container>
-    <S.Animation options={defaultOptions} />
-  </S.Container>
-  );
+    <S.Container>
+      <S.Animation options={defaultOptions} />
+    </S.Container>
+  )
 }
 
-export default Works;
+export default Works

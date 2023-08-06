@@ -1,4 +1,8 @@
 {
+    "languages": {
+        "english": "English (en-us)",
+        "portuguese": "Portuguese (pt-br)"
+    },
     "nav": {
         "about": "About",
         "works": "Works",

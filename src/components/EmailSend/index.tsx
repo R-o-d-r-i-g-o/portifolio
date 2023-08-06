@@ -1,27 +1,27 @@
-import React from 'react';
-import TiltEffect from '../TiltEffect';
-import Qrcode from '../Qrcode';
+import React from 'react'
+import TiltEffect from '../TiltEffect'
+import Qrcode from '../Qrcode'
 import useTranslation from 'next-translate/useTranslation'
-import * as S from './styles';
+import * as S from './styles'
 
 type payload = {
-  subject: string;
-  body: string;
+  subject: string
+  body: string
 }
 
 const EmailSend = () => {
   const { t } = useTranslation('common')
-  const [emailPayload, setEmailPayload] = React.useState({} as payload);
-  const [qrcodeLink, setQrcodeLink ] = React.useState('');
+  const [emailPayload, setEmailPayload] = React.useState({} as payload)
+  const [qrcodeLink, setQrcodeLink] = React.useState('')
 
   const handleSubmit = () => {
-    const emailReceiver = 'rodrigomarqribeiro@gmail.com';
-    const emailContent = encodeURIComponent(emailPayload?.body);
+    const emailReceiver = 'rodrigomarqribeiro@gmail.com'
+    const emailContent = encodeURIComponent(emailPayload?.body)
 
-    const emailUrl = `mailto:${emailReceiver}?subject=${emailPayload?.subject}&body=${emailContent}`;
+    const emailUrl = `mailto:${emailReceiver}?subject=${emailPayload?.subject}&body=${emailContent}`
 
-    window.location.href = emailUrl;
-  };
+    window.location.href = emailUrl
+  }
 
   const data = [
     {
@@ -39,52 +39,45 @@ const EmailSend = () => {
       label: 'Open e-mail',
       icon: <S.GMailImg />
     }
-  ];
+  ]
 
   return (
     <S.Container>
       <S.Line />
       <S.FormContainer>
         <S.Form>
-            <S.Input
-              placeholder={t('page.email-title')}
-              value={emailPayload.subject}
-              onChange={e => setEmailPayload({ ...emailPayload, subject: e.target.value })}
-            />
-            <S.TextArea
-              placeholder={t('page.email-body')}
-              rows={10}
-              value={emailPayload.body}
-              onChange={e => setEmailPayload({ ...emailPayload, body: e.target.value })}
-            />
-            <S.SendEmail
-              type="submit"
-              onClick={handleSubmit}
-            >
-              {t('page.email-button')}
-            </S.SendEmail>
-          </S.Form>
+          <S.Input
+            placeholder={t('page.email-title')}
+            value={emailPayload.subject}
+            onChange={(e) =>
+              setEmailPayload({ ...emailPayload, subject: e.target.value })
+            }
+          />
+          <S.TextArea
+            placeholder={t('page.email-body')}
+            rows={10}
+            value={emailPayload.body}
+            onChange={(e) =>
+              setEmailPayload({ ...emailPayload, body: e.target.value })
+            }
+          />
+          <S.SendEmail type="submit" onClick={handleSubmit}>
+            {t('page.email-button')}
+          </S.SendEmail>
+        </S.Form>
       </S.FormContainer>
       <S.MediaSet>
         {data.map((item, index) => (
-          <TiltEffect 
-            shouldStopOnResize
-            key={index}
-          >
-            <a
-              aria-label={item.label}
-              onClick={() => setQrcodeLink(item.ref)}
-            >
-              <S.Medias>
-                {item.icon}
-              </S.Medias>
+          <TiltEffect shouldStopOnResize key={index}>
+            <a aria-label={item.label} onClick={() => setQrcodeLink(item.ref)}>
+              <S.Medias>{item.icon}</S.Medias>
             </a>
           </TiltEffect>
         ))}
       </S.MediaSet>
-      <Qrcode link={qrcodeLink}/>
+      <Qrcode link={qrcodeLink} />
     </S.Container>
-  );
+  )
 }
 
-export default EmailSend;
+export default EmailSend

@@ -1,8 +1,8 @@
 'use client'
 
-import React from 'react';
-import { Modal } from 'antd';
-import styled from "styled-components";
+import React from 'react'
+import { Modal } from 'antd'
+import styled from 'styled-components'
 
 const Container = styled.div`
   position: relative;
@@ -13,7 +13,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   margin: 20px auto;
   gap: 20px;
-`;
+`
 
 const ImageContainer = styled.div`
   position: relative;
@@ -23,17 +23,18 @@ const ImageContainer = styled.div`
   max-height: 120px;
   overflow: hidden;
   border-radius: 10px;
-`;
+`
 
 const CoverImage = styled.img`
   max-width: 100%;
   height: auto;
   object-fit: cover;
-`;
+`
 
 const Card = styled.div`
   max-width: 225px;
-  box-shadow: ${({ theme }) => `20px 20px 50px rgba(${theme.bodyColorRGB}, .2)`};
+  box-shadow: ${({ theme }) =>
+    `20px 20px 50px rgba(${theme.bodyColorRGB}, .2)`};
   border-radius: 15px;
   background: ${({ theme }) => `rgba(${theme.textColorRGB}, .2)`};
   overflow: hidden;
@@ -53,25 +54,25 @@ const Card = styled.div`
   @media screen and (max-width: 500px) {
     max-width: 350px;
   }
-`;
+`
 
 const Title = styled.h3`
   font-size: 1.2em;
   color: ${({ theme }) => theme.textColor};
   z-index: 1;
   margin: 5px 0 2px;
-`;
+`
 
 const BodyText = styled.p`
-  font-size: .8em;
+  font-size: 0.8em;
   color: ${({ theme }) => theme.textColor};
   font-weight: 300;
-`;
+`
 
 const ButtonContaier = styled.div`
   display: flex;
   gap: 5px;
-`;
+`
 
 const HiperLink = styled.button`
   position: relative;
@@ -85,10 +86,11 @@ const HiperLink = styled.button`
   border: none;
   cursor: pointer;
   box-shadow: ${({ theme }) => `0 5px 15px rgba(${theme.bodyColorRGB}, .2)`};
-`;
+`
 
 const ModalItem = styled(Modal)`
-  .ant-modal-content, .ant-modal-title {
+  .ant-modal-content,
+  .ant-modal-title {
     background: ${({ theme }) => theme.bodyColor} !important;
     color: ${({ theme }) => theme.textColor} !important;
 
@@ -111,13 +113,13 @@ const ModalItem = styled(Modal)`
       background: ${({ theme }) => theme.textColor} !important;
     }
   }
-`;
+`
 
 const ExternalLink = styled(HiperLink)`
   background: transparent;
   border: 1px solid ${({ theme }) => theme.textColor};
   color: ${({ theme }) => theme.textColor};
-`;
+`
 
 export {
   Container,
@@ -130,4 +132,4 @@ export {
   ModalItem,
   HiperLink,
   ExternalLink
-};
+}

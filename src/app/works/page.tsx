@@ -1,8 +1,8 @@
-"use client"
+'use client'
 
-import React from "react";
-import Repos from '../../components/Repos';
+import React from 'react'
+import Repos from '../../components/Repos'
 
-const Works = () => <Repos />;
+const Works = () => <Repos />
 
-export default Works;
+export default Works

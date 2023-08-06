@@ -1,22 +1,22 @@
-import React from "react";
+import React from 'react'
 import { Button } from '../Documents/styles'
-import { Container as Cont } from '../Documents/styles';
-import { FaLinkedin, FaGithubSquare } from 'react-icons/fa';
+import { Container as Cont } from '../Documents/styles'
+import { FaLinkedin, FaGithubSquare } from 'react-icons/fa'
 import { GoMail } from 'react-icons/go'
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const Container = styled.div`
   margin: 30px 0 60px;
-`;
+`
 
 const FormContainer = styled.div`
   margin-top: 30px;
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
-`;
+`
 
 const Form = styled.div`
   width: 500px;
@@ -27,7 +27,7 @@ const Form = styled.div`
   @media only screen and (max-width: 768px) {
     width: 300px;
   }
-`;
+`
 
 const Input = styled.input`
   padding: 20px;
@@ -35,7 +35,7 @@ const Input = styled.input`
   border-radius: 5px;
   background: ${({ theme }) => `rgba(${theme.bodyColorRGB}, .2)`};
   color: ${({ theme }) => theme.textColor};
-`;
+`
 
 const TextArea = styled.textarea`
   padding: 20px;
@@ -45,7 +45,7 @@ const TextArea = styled.textarea`
   border-radius: 5px;
   background: ${({ theme }) => `rgba(${theme.bodyColorRGB}, .2)`};
   color: ${({ theme }) => theme.textColor};
-`;
+`
 
 const SendEmail = styled(Button)`
   width: 100%;
@@ -55,19 +55,19 @@ const SendEmail = styled(Button)`
   color: ${({ theme }) => theme.bodyColor};
   border: none;
   padding: 20px;
-`;
+`
 
 const Line = styled.hr`
   box-shadow: ${({ theme }) => `20px 20px 50px rgba(${theme.textColor}, .3)`};
   color: ${({ theme }) => theme.textColor};
-`;
+`
 
 const MediaSet = styled(Cont)`
   margin-top: 10px;
   align-items: center;
   flex-direction: row;
   gap: 10px;
-`;
+`
 
 const Medias = styled(Button)`
   width: fit-content;
@@ -75,25 +75,25 @@ const Medias = styled(Button)`
   background: ${({ theme }) => theme.textColor};
   border: none;
   padding: 8px;
-`;
+`
 
 const LinkinImg = styled(FaLinkedin)`
   color: ${({ theme }) => theme.bodyColor};
   height: 25px;
   width: 25px;
-`;
+`
 
 const GithubImg = styled(FaGithubSquare)`
   color: ${({ theme }) => theme.bodyColor};
   height: 25px;
   width: 25px;
-`;
+`
 
 const GMailImg = styled(GoMail)`
   color: ${({ theme }) => theme.bodyColor};
   height: 25px;
   width: 25px;
-`;
+`
 
 export {
   Container,
@@ -105,7 +105,7 @@ export {
   Line,
   MediaSet,
   Medias,
-  LinkinImg, 
-  GithubImg, 
+  LinkinImg,
+  GithubImg,
   GMailImg
-};
+}

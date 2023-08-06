@@ -1,4 +1,8 @@
 {
+    "languages": {
+        "english": "Inglês (en-us)",
+        "portuguese": "Português (pt-br)"
+    },
     "nav": {
         "about": "Sobre",
         "works": "Projetos",

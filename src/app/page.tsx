@@ -1,12 +1,12 @@
-"use client"
+'use client'
 
-import Presentation from '@/components/Presentation';
-import EmailSend from '@/components/EmailSend';
-import TextParagrath from '@/components/TextParagrath';
-import RedirectToCv from '@/components/Documents';
+import Presentation from '@/components/Presentation'
+import EmailSend from '@/components/EmailSend'
+import TextParagrath from '@/components/TextParagrath'
+import RedirectToCv from '@/components/Documents'
 import useTranslation from 'next-translate/useTranslation'
 
-import Skills from '../components/Skills';
+import Skills from '../components/Skills'
 
 const Home = () => {
   const { t } = useTranslation('common')
@@ -15,12 +15,12 @@ const Home = () => {
     <>
       <Presentation />
       <RedirectToCv />
-      <TextParagrath 
+      <TextParagrath
         isBodyText
         subTitle={t('page.work-title')}
         bodyText={t('page.work-description')}
       />
-      <TextParagrath 
+      <TextParagrath
         isBodyText
         subTitle={t('page.education-title')}
         bodyText={t('page.education-description')}
@@ -29,6 +29,6 @@ const Home = () => {
       <EmailSend />
     </>
   )
-};
+}
 
-export default Home;
+export default Home

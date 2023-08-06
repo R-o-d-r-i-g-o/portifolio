@@ -1,26 +1,26 @@
-"use client"
+'use client'
 
-import { DefaultTheme } from "styled-components";
+import { DefaultTheme } from 'styled-components'
 
 export const defaultTheme: DefaultTheme = {
-  name: "default",
-  bodyVideo: "/videos/background-video-white.mp4",
+  name: 'default',
+  bodyVideo: '/videos/background-video-white.mp4',
   bodyColorRGB: '0, 0, 0',
-  bodyColor: "#ffffff",
+  bodyColor: '#ffffff',
   textColorRGB: '255, 255, 255',
-  textColor: "#000000",
+  textColor: '#000000',
   palette: {
     common: {
-      black: "#121212",
-      white: "#ffffff",
+      black: '#121212',
+      white: '#ffffff'
     },
     primary: {
-      main: "#A0A0A0",
-      contrastText: "#ffffff",
+      main: '#A0A0A0',
+      contrastText: '#ffffff'
     },
     secondary: {
-      main: "#d946ef",
-      contrastText: "#ffffff",
-    },
-  },
-};
+      main: '#d946ef',
+      contrastText: '#ffffff'
+    }
+  }
+}

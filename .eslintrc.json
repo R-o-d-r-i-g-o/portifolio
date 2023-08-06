@@ -10,9 +10,7 @@
     "next/core-web-vitals",
     "standard",
     "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
-    "prettier/standard",
-    "prettier/react"
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -28,13 +26,11 @@
     "prettier"
   ],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": "warn",
     "space-before-function-paren": "off",
-    "react/prop-types": "off"
-  },
-  "eslintIgnore": [
-    "node_modules",
-    ".next",
-    "/*.js"
-  ]
+    "react/prop-types": "off",
+    "no-console": "warn",
+    "no-unused-vars": "warn",
+    "prefer-const": "warn"
+  }
 }
