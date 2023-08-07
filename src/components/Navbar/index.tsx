@@ -62,6 +62,7 @@ const Navbar = () => {
         ? `${pathname}?lang=${changeLang.option}`
         : pathname) as Router
     )
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [changeLang])
 
   return (

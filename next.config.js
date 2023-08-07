@@ -5,12 +5,10 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   compiler: {
-    language: 'typescript',
     styledComponents: {
       minify: true,
       ssr: true
     },
-    ssr: true
   },
   experimental: {
     appDir: true,
