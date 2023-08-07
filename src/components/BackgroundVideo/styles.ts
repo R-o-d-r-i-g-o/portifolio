@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 const Video = styled.video.attrs({

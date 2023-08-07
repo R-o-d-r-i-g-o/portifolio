@@ -13,6 +13,9 @@ import * as S from './styles'
 
 import { useRouter, usePathname } from 'next/navigation'
 
+// eslint-disable-next-line camelcase
+type Router = __next_route_internal_types__.RouteImpl<string>
+
 const Navbar = () => {
   const router = useRouter()
   const pathname = usePathname() || '/'
@@ -30,7 +33,7 @@ const Navbar = () => {
       {menuOpitons.map(({ label, ref }) => (
         <S.Item
           key={label}
-          href={`${ref}?lang=${changeLang.option}` as any}
+          href={`${ref}?lang=${changeLang.option}` as Router}
           onClick={() => setShowMobileNav(undefined)}
         >
           {t(label)}
@@ -50,12 +53,14 @@ const Navbar = () => {
 
   useEffect(() => {
     setTheme(changeTheme ? darkTheme : defaultTheme)
-  }, [changeTheme])
+  }, [changeTheme, setTheme])
 
   useEffect(() => {
     toast(`${t(changeLang.label)}`)
     router.replace(
-      (!!changeLang ? `${pathname}?lang=${changeLang.option}` : pathname) as any
+      (changeLang
+        ? `${pathname}?lang=${changeLang.option}`
+        : pathname) as Router
     )
   }, [changeLang])
 

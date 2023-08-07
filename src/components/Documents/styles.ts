@@ -1,5 +1,3 @@
-import React from 'react'
-import { HiperLink } from '../Repos/styles'
 import { BiLink } from 'react-icons/bi'
 import styled from 'styled-components'
 

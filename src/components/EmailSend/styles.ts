@@ -1,6 +1,4 @@
-import React from 'react'
-import { Button } from '../Documents/styles'
-import { Container as Cont } from '../Documents/styles'
+import { Container as Cont, Button } from '../Documents/styles'
 import { FaLinkedin, FaGithubSquare } from 'react-icons/fa'
 import { GoMail } from 'react-icons/go'
 import styled from 'styled-components'

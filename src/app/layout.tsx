@@ -76,5 +76,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default appWithTranslation(RootLayout as any)
 export { metadata }

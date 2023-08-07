@@ -31,6 +31,7 @@ const ExperienceCard = ({ experience }: { experience: experienceType }) => {
     <VerticalTimelineElement
       contentStyle={{ background: theme.bodyColor }}
       contentArrowStyle={{ borderRight: `7px solid ${theme.bodyColor}` }}
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       date={(<S.Date>{t(experience.date)}</S.Date>) as any}
       iconStyle={{ background: theme.bodyColor }}
       icon={
