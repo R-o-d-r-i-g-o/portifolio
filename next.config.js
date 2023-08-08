@@ -13,8 +13,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
     forceSwcTransforms: true,
-    typedRoutes: true,
-    nftTracing: true 
+    typedRoutes: true
   }
 }
 
